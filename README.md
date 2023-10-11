@@ -10,7 +10,7 @@ The aim is to create an Augmented Reality mobile  application, to provide enhanc
 * Creators of Documentation
 
 ## User Stories
-As a \<type of user>, I want to \<some goal> so that \<some reason>.
+As a user, I want a mobile app that enhances the Galasa documentation so it is more interactive and informative.
 
 ## Project Management Tools
 * [Kanban Board](https://github.com/orgs/spe-uob/projects/137/)
