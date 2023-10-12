@@ -17,4 +17,5 @@
 ## Questions to the Client
 * Do you want the software to be open source or do you want to retain the IP?
   * Do you have any preference on the license we use?
+* Do you have any preferences on MVP/Beta/Final release dates? (currently: 1st week of December / before Easter / latest 2nd May) 
  
