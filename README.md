@@ -1,5 +1,18 @@
 # 2023-AIAREnhancedTech
 
+## Table of Contents
+  - [AIAREnhancedTech](#2023-AIAREnhancedTech)
+  - [Table of Contents](#Table-of-Contents)
+  - [Project Summary](#Project-Summary)
+  - [Ambitions for final product](#Ambitions-for-final-product)
+  - [StakeHolders](#StakeHolders)
+  - [Getting Started](#Getting-Started)
+  - [Prerequisits](#Prerequisits)
+  - [Technologies](#Technologies)
+  - [Kanban Board](#Kanban-Board)
+  - [Gantt Chart](#Gantt-Chart)
+  - [License](#License)
+
 ## Project Summary
 
 The project's objective is to develop a mobile application that leverages Augmented Reality technology to offer enhancements and supplementary information for Galasa Documentation.
@@ -20,18 +33,31 @@ Develop a fully functional mobile application that enriches a users their experi
 
 Our mobile app transforms the way users interact with Galasa Documentation, providing an immersive and informative experience using Augmented Reality technology.
 
-## Stakeholders
+## StakeHolders
 | Stakeholder | Name | Role |
 |-|-|-|
 |Clients| Jon Mc Namara & Stuart Walker | IBM employees - overseeing the project and delivering the project specification|
 | Team | Zak Mansuri, Peter Sheehan, Ruoxin Chen, Louie Sinadjan | Developing the product |
 | Test Engineers | | Using the mobile app, trying to undertand Galasa |
 
-## User Stories
+# Getting Started
 
-As a user, I want a mobile app that enhances the Galasa documentation so it is more interactive and informative.
+## Prerequisits
 
-## Project Management Tools
+* Download Xcode for Swift
+
+## Technologies
+
+* Swift
+* AR Kit 6
+* IBM's AI Watson Speech to Text, Text to Speech
+
+## Kanban Board
 
 * [Kanban Board](https://github.com/orgs/spe-uob/projects/137/)
-* Gantt Chart will go here (working on it atm)
+
+## Gantt Chart
+
+## Licence
+
+No Licence Chosen
