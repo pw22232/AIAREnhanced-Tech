@@ -61,6 +61,8 @@ Our mobile app transforms the way users interact with Galasa Documentation, prov
 
 ## Gantt Chart
 
+* [Gantt Chart](https://github.com/spe-uob/2023-AIAREnhancedTech)
+
 ## Licence
 
 No Licence Chosen
