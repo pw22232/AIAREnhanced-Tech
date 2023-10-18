@@ -4,7 +4,7 @@
   - [AIAREnhancedTech](#2023-AIAREnhancedTech)
   - [Table of Contents](#Table-of-Contents)
   - [Project Summary](#Project-Summary)
-  - [Ambitions for final product](#Ambitions-for-final-product)
+  - [Ambitions for the final product](#Ambitions-for-final-product)
   - [StakeHolders](#StakeHolders)
   - [Getting Started](#Getting-Started)
   - [Prerequisits](#Prerequisits)
@@ -19,9 +19,9 @@ The project's objective is to develop a mobile application that leverages Augmen
 
 ### Ambitions for final product
 
-We create a fully functional mobile application - a user can move their phone over Galasa documentation into the cameras frame and AR enhancement is shown. This enhancemnt involves providing more detail about the diagram with help of an AI assistant, it will also turn static digrams into moving and enhance the image to make it more visually appealing. The User will be able to ask quitions to the AI Assistant to gain more information.
+We create a fully functional mobile application - a user can move their phone over Galasa documentation into the camera's frame and AR enhancement is shown. This enhancement involves providing more detail about the diagram with the help of an AI assistant, it will also turn static diagrams into moving and enhance the image to make it more visually appealing. The User will be able to ask questions to the AI Assistant to gain more information.
 
-Develop a fully functional mobile application that enriches a users their experience with Galasa Documentation through Augmented Reality. By simply moving their phone's camera over Galasa documentation, users will witness AR enhancements. These enhancements involve several key features:
+Develop a fully functional mobile application that enriches a user's experience with Galasa Documentation through Augmented Reality. By simply moving their phone's camera over Galasa documentation, users will witness AR enhancements. These enhancements involve several key features:
 
 1. **Detailed Information**: An AI assistant will provide in-depth explanations and context for diagrams, making complex information more understandable.
 
@@ -38,7 +38,7 @@ Our mobile app transforms the way users interact with Galasa Documentation, prov
 |-|-|-|
 |Clients| Jon Mc Namara & Stuart Walker | IBM employees - overseeing the project and delivering the project specification|
 | Team | Zak Mansuri, Peter Sheehan, Ruoxin Chen, Louie Sinadjan | Developing the product |
-| Test Engineers | | Using the mobile app, trying to undertand Galasa |
+| Test Engineers | | Using the mobile app, trying to understand Galasa |
 
 # Getting Started
 
@@ -52,7 +52,7 @@ Our mobile app transforms the way users interact with Galasa Documentation, prov
   
 * **AR Kit 6**  -  ARKit is a software development framework by Apple that enables the creation of augmented reality (AR) experiences on iOS devices. ARKit has been used to develop a wide range of AR applications, including many educational tools.  It provides tools and resources for developers to seamlessly blend digital content with the real world through the device's camera and sensors.
   
-* **IBM's AI Watson Speech to Text, Text to Speech**  -  IBM's Watson is an artificial intelligence system developed by IBM. Watson is powered by advanced machine learning and natural language processing algorithms. Watson Speech to Text and Text to Speech are services within IBM's Watson AI platform. We will look to harness Watson’s Text to Speech service to transform written text into lifelike speech, facilitating the applications interactive voice response systems.
+* **IBM's AI Watson Speech to Text, Text to Speech**  -  IBM's Watson is an artificial intelligence system developed by IBM. Watson is powered by advanced machine learning and natural language processing algorithms. Watson Speech to Text and Text to Speech are services within IBM's Watson AI platform. We will look to harness Watson’s Text to Speech service to transform written text into lifelike speech, facilitating the application's interactive voice response systems.
 
 
 ## Kanban Board
