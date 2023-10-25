@@ -33,7 +33,7 @@ Develop a fully functional mobile application that enriches a user's experience 
 
 Our mobile app transforms the way users interact with Galasa Documentation, providing an immersive and informative experience using Augmented Reality technology.
 
-## StakeHolders
+## Stakeholders
 | Stakeholder | Name | Role |
 |-|-|-|
 |Clients| Jon Mc Namara & Stuart Walker | IBM employees - overseeing the project and delivering the project specification|
