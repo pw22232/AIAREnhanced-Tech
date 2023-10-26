@@ -57,6 +57,7 @@ class AIARView: ARView{
         
         //add an anchor to the scene
         scene.addAnchor(coordinateAnchor)
+       
     }
     
     
@@ -69,6 +70,7 @@ class AIARView: ARView{
         
         //Generate an entity with code
         let box = MeshResource.generateBox(size: 1)
+        
         let entity = ModelEntity(mesh: box)
         
         //add entityto an anchor, so it's placed in the scene
