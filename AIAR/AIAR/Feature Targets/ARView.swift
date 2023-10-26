@@ -21,8 +21,6 @@ class AIARView: ARView{
     convenience init(){
         self.init(frame: UIScreen.main.bounds)
         placeBlueBlock()
-        
-        
     }
     
     
@@ -87,7 +85,6 @@ class AIARView: ARView{
         
         let anchor = AnchorEntity(plane: .horizontal)
         anchor.addChild(entity)
-        
         scene.addAnchor(anchor)
     }
    
