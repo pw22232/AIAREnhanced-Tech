@@ -75,6 +75,7 @@ class AIARView: ARView{
         
         //add entityto an anchor, so it's placed in the scene
         let anchor = AnchorEntity()
+        
         anchor.addChild(entity)
         
     }
