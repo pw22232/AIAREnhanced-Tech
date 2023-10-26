@@ -89,6 +89,7 @@ class AIARView: ARView{
         let anchor = AnchorEntity(plane: .horizontal)
         anchor.addChild(entity)
         scene.addAnchor(anchor)
+        
     }
    
     
