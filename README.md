@@ -5,6 +5,7 @@
   - [Table of Contents](#Table-of-Contents)
   - [Project Summary](#Project-Summary)
   - [Ambitions for final product](#Ambitions-for-final-product)
+  - [Usability](#Usability)
   - [StakeHolders](#StakeHolders)
   - [Getting Started](#Getting-Started)
   - [Prerequisits](#Prerequisits)
@@ -32,6 +33,17 @@ Develop a fully functional mobile application that enriches a users their experi
 4. **Interactive Querying**: Users will have the ability to interact with the AI assistant by asking questions, enabling them to delve deeper into the subject matter.
 
 Our mobile app transforms the way users interact with Galasa Documentation, providing an immersive and informative experience using Augmented Reality technology.
+
+## Usability
+
+By tailoring your product to meet the needs of these three personas, we can ensure that the application serves as a valuable resource for everyone. Offering a structured learning path, with content ranging from introductory to advanced, will make the product a comprehensive and inclusive resource for Galasa documentation at all levels.
+
+1. **Beginner - Exploring Galasa**: The beginner is someone new to Galasa and has limited or no prior knowledge of the tool. They are typically eager to understand the basics and get started. For this persona, the product offers introductory material and clear explanations of fundamental concepts to ensure that the learning curve is gentle. By focusing on simplicity we aim help beginners feel confident about using Galasa and running their first tests.
+
+2. **Intermediate - Expanding Skills**: The intermediate user already has some experience with Galasa and wants to enhance their knowledge and skills. To support this persona we will create an in-depth resource with more technical language and encourage users to apply their knowledge to more complex testing scenarios.
+
+3. **Expert - Mastering Galasa**: Experts in Galasa are looking to fine-tune their understanding and master the tool's nuances. They seek in-depth technical documentation, detailed reference guides, and advanced troubleshooting resources. The product will cater for an advanced audience by providing access to extensive documentation and an AI assistant who the user can talk with to perfect his understanding of Galasa
+
 
 ## StakeHolders
 | Stakeholder | Name | Role |
