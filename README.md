@@ -4,10 +4,11 @@
   - [AIAREnhancedTech](#2023-AIAREnhancedTech)
   - [Table of Contents](#Table-of-Contents)
   - [Project Summary](#Project-Summary)
-  - [Ambitions for the final product](#Ambitions-for-final-product)
-  - [StakeHolders](#StakeHolders)
+  - [Ambitions for final product](#Ambitions-for-final-product)
+  - [Usability](#Usability)
+  - [Stakeholders](#Stakeholders)
   - [Getting Started](#Getting-Started)
-  - [Prerequisits](#Prerequisits)
+  - [Prerequisites](#Prerequisites)
   - [Technologies](#Technologies)
   - [Kanban Board](#Kanban-Board)
   - [Gantt Chart](#Gantt-Chart)
@@ -33,7 +34,18 @@ Develop a fully functional mobile application that enriches a user's experience 
 
 Our mobile app transforms the way users interact with Galasa Documentation, providing an immersive and informative experience using Augmented Reality technology.
 
-## Stakeholders
+## Usability
+
+By tailoring your product to meet the needs of these three personas, we can ensure that the application serves as a valuable resource for everyone. Offering a structured learning path, with content ranging from introductory to advanced, will make the product a comprehensive and inclusive resource for Galasa documentation at all levels.
+
+1. **Beginner - Exploring Galasa**: The beginner is someone new to Galasa and has limited or no prior knowledge of the tool. They are typically eager to understand the basics and get started. For this persona, the product offers introductory material and clear explanations of fundamental concepts to ensure that the learning curve is gentle. By focusing on simplicity we aim help beginners feel confident about using Galasa and running their first tests.
+
+2. **Intermediate - Expanding Skills**: The intermediate user already has some experience with Galasa and wants to enhance their knowledge and skills. To support this persona we will create an in-depth resource with more technical language and encourage users to apply their knowledge to more complex testing scenarios.
+
+3. **Expert - Mastering Galasa**: Experts in Galasa are looking to fine-tune their understanding and master the tool's nuances. They seek in-depth technical documentation, detailed reference guides, and advanced troubleshooting resources. The product will cater for an advanced audience by providing access to extensive documentation and an AI assistant who the user can talk with to perfect his understanding of Galasa
+
+## StakeHolders
+
 | Stakeholder | Name | Role |
 |-|-|-|
 |Clients| Jon Mc Namara & Stuart Walker | IBM employees - overseeing the project and delivering the project specification|
@@ -42,7 +54,7 @@ Our mobile app transforms the way users interact with Galasa Documentation, prov
 
 # Getting Started
 
-## Prerequisits
+## Prerequisites
 
 * Download Xcode for Swift
 
@@ -53,7 +65,6 @@ Our mobile app transforms the way users interact with Galasa Documentation, prov
 * **AR Kit 6**  -  ARKit is a software development framework by Apple that enables the creation of augmented reality (AR) experiences on iOS devices. ARKit has been used to develop a wide range of AR applications, including many educational tools.  It provides tools and resources for developers to seamlessly blend digital content with the real world through the device's camera and sensors.
   
 * **IBM's AI Watson Speech to Text, Text to Speech**  -  IBM's Watson is an artificial intelligence system developed by IBM. Watson is powered by advanced machine learning and natural language processing algorithms. Watson Speech to Text and Text to Speech are services within IBM's Watson AI platform. We will look to harness Watson’s Text to Speech service to transform written text into lifelike speech, facilitating the application's interactive voice response systems.
-
 
 ## Kanban Board
 
