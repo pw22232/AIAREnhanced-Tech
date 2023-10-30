@@ -1,24 +1,21 @@
-# 2023-AIAREnhancedTech
+# 2023-AIAREnhancedTech<!-- omit from toc -->
 
-## Table of Contents
-  - [AIAREnhancedTech](#2023-AIAREnhancedTech)
-  - [Table of Contents](#Table-of-Contents)
-  - [Project Summary](#Project-Summary)
-  - [Ambitions for final product](#Ambitions-for-final-product)
-  - [Usability](#Usability)
-  - [Stakeholders](#Stakeholders)
-  - [Getting Started](#Getting-Started)
-  - [Prerequisites](#Prerequisites)
-  - [Technologies](#Technologies)
-  - [Kanban Board](#Kanban-Board)
-  - [Gantt Chart](#Gantt-Chart)
-  - [License](#License)
+## Table of Contents<!-- omit from toc -->
+
+- [Project Summary](#project-summary)
+- [Usability](#usability)
+- [Stakeholders](#stakeholders)
+- [Getting Started](#getting-started)
+  - [Prerequisites](#prerequisites)
+  - [Technologies](#technologies)
+- [Project Management Tools](#project-management-tools)
+- [License](#license)
 
 ## Project Summary
 
 The project's objective is to develop a mobile application that leverages Augmented Reality technology to offer enhancements and supplementary information for Galasa Documentation.
 
-### Ambitions for final product
+### Ambitions for final product<!-- omit from toc -->
 
 We create a fully functional mobile application - a user can move their phone over Galasa documentation into the camera's frame and AR enhancement is shown. This enhancement involves providing more detail about the diagram with the help of an AI assistant, it will also turn static diagrams into moving and enhance the image to make it more visually appealing. The User will be able to ask questions to the AI Assistant to gain more information.
 
@@ -44,7 +41,7 @@ By tailoring your product to meet the needs of these three personas, we can ensu
 
 3. **Expert - Mastering Galasa**: Experts in Galasa are looking to fine-tune their understanding and master the tool's nuances. They seek in-depth technical documentation, detailed reference guides, and advanced troubleshooting resources. The product will cater for an advanced audience by providing access to extensive documentation and an AI assistant who the user can talk with to perfect his understanding of Galasa
 
-## StakeHolders
+## Stakeholders
 
 | Stakeholder | Name | Role |
 |-|-|-|
@@ -52,28 +49,30 @@ By tailoring your product to meet the needs of these three personas, we can ensu
 | Team | Zak Mansuri, Peter Sheehan, Ruoxin Chen, Louie Sinadjan | Developing the product |
 | Test Engineers | | Using the mobile app, trying to understand Galasa |
 
-# Getting Started
+## Getting Started
 
-## Prerequisites
+### Prerequisites
 
-* Download Xcode for Swift
+- Download Xcode for Swift
 
-## Technologies
+### Technologies
 
-* **Swift**  -  As a team, we have chosen to utilize the Swift programming language to develop our application. Swift is a modern, open-source programming language developed by Apple. Swift offers performance improvements over Objective-C and features a clean and concise syntax making it a popular choice for building iOS applications.
+- **Swift**  -  As a team, we have chosen to utilize the Swift programming language to develop our application. Swift is a modern, open-source programming language developed by Apple. Swift offers performance improvements over Objective-C and features a clean and concise syntax making it a popular choice for building iOS applications.
   
-* **AR Kit 6**  -  ARKit is a software development framework by Apple that enables the creation of augmented reality (AR) experiences on iOS devices. ARKit has been used to develop a wide range of AR applications, including many educational tools.  It provides tools and resources for developers to seamlessly blend digital content with the real world through the device's camera and sensors.
+- **AR Kit 6**  -  ARKit is a software development framework by Apple that enables the creation of augmented reality (AR) experiences on iOS devices. ARKit has been used to develop a wide range of AR applications, including many educational tools.  It provides tools and resources for developers to seamlessly blend digital content with the real world through the device's camera and sensors.
   
-* **IBM's AI Watson Speech to Text, Text to Speech**  -  IBM's Watson is an artificial intelligence system developed by IBM. Watson is powered by advanced machine learning and natural language processing algorithms. Watson Speech to Text and Text to Speech are services within IBM's Watson AI platform. We will look to harness Watson’s Text to Speech service to transform written text into lifelike speech, facilitating the application's interactive voice response systems.
+- **IBM's AI Watson Speech to Text, Text to Speech**  -  IBM's Watson is an artificial intelligence system developed by IBM. Watson is powered by advanced machine learning and natural language processing algorithms. Watson Speech to Text and Text to Speech are services within IBM's Watson AI platform. We will look to harness Watson’s Text to Speech service to transform written text into lifelike speech, facilitating the application's interactive voice response systems.
 
-## Kanban Board
+## Project Management Tools
 
-* [Kanban Board](https://github.com/orgs/spe-uob/projects/137/)
+### Kanban Board<!-- omit from toc -->
 
-## Gantt Chart
+- [Kanban Board](https://github.com/orgs/spe-uob/projects/137/)
 
-* [Gantt Chart](https://github.com/orgs/spe-uob/projects/137/views/4)
+### Gantt Chart<!-- omit from toc -->
 
-## Licence
+- [Gantt Chart](https://github.com/orgs/spe-uob/projects/137/views/4)
 
-No Licence Chosen
+## License
+
+No License Chosen
