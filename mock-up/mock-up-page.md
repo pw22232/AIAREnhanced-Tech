@@ -20,5 +20,17 @@ We developed conceptual designs for the augmented diagram and presented these mo
 
 Our initial design was inspired by a specific example, which served as a foundational reference.
 
-![First Image](IMG_1608.png)
+![First Image](IMG_1608.PNG)
+
+Using this example as a starting point, we crafted our own unique mockup design.
+
+![Mockup Picture 1](picture_1.PNG)
+
+This design presents a visually engaging and user-friendly interface, enabling users to interact seamlessly with their documentation. In the lower left corner, you'll notice 'Watson,' a virtual assistant designed to aid in understanding the documentation. Watson is envisioned as a 3D figure, skillfully anchored within the 3D space captured by the user's camera, enhancing the overall interactive experience.
+
+When users interact with an element within the augmented reality diagram, it will expand to offer additional, in-depth details about that specific section of the documentation. This interactive feature is designed to enhance understanding by providing context-sensitive information on-demand.
+
+Our  design was mapped by this specific example.
+
+![Second Image](IMG_1610.PNG)
 
