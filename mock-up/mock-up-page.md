@@ -34,3 +34,6 @@ Our  design was mapped by this specific example.
 
 ![Second Image](IMG_1610.PNG)
 
+Drawing from this example as our reference, we created an original mock-up design.
+
+![Mockup Picture 2](picture_2.png)
