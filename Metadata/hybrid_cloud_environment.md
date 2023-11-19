@@ -81,68 +81,84 @@
 - Galasa is responsible for initializing the test environment, generating necessary test data, executing the test, and validating outcomes.
 - All test results and artifacts are centrally archived, enabling streamlined report generation and detailed failure diagnostics.
 
-### 3270 Emulator 
-- This is used to imitate interactions with mainframe computers in a hybrid cloud environment.
+## 3270 Emulator 
 
-### Application
+### Entry Level
+- This is used to imitate interactions with mainframe computers in a hybrid cloud environment.
+  
+### Specialist
+- A critical component for emulating interactions with mainframe systems in a hybrid cloud configuration.
+  
+
+## Application
+
+### Entry Level
 - Represents the central part of the hybrid cloud application.
 - Includes several important parts for thorough testing.
 
-### Web Browser
+### Specialist
+- The "Application" represents the core entity within the hybrid cloud application, encompassing key components for end-to-end testing.
+
+
+## Web Browser
+
+### Entry Level
 - Symbolizes the user interface and how users interact with the application.
 
-### Database
+### Specialist
+- Represents the user interface component and user interactions within the application.
+
+
+## Database
+
+### Entry Level
 - Stores vital data for the hybrid cloud application.
 
-### On/Off Premise Cloud
+### Specialist
+- A pivotal component for storing essential data pertinent to the hybrid cloud application.
+
+
+## On/Off Premise Cloud
+
+### Entry Level
 - Indicates both internal and external cloud hosting options.
 
-### Cloud Hosted Web Server
+### Specialist
+- Indicates the hybrid model of cloud hosting, encompassing both on-premise and off-premise cloud services.
+
+
+## Cloud Hosted Web Server
+
+### Entry Level
 - A web server that's run in the cloud.
 
-### z/OS LPAR
+### Specialist
+- Represents a web server infrastructure hosted within the cloud environment.
+
+
+## z/OS LPAR
+
+### Entry Level
 - Represents a mainframe computing environment.
 - Includes components specific to mainframe technology.
 
-### Batch Job
-- Signifies running batch processes on the mainframe.
-
-### CICS Application
-- Related to mainframe applications under the Customer Information Control System (CICS).
-
-
-
-
-
-
-
-
-#### Components 
-
-
-### 3270 Emulator 
-- A critical component for emulating interactions with mainframe systems in a hybrid cloud configuration.
-
-### Application
-- The "Application" represents the core entity within the hybrid cloud application, encompassing key components for end-to-end testing.
-
-### Web Browser
-- Represents the user interface component and user interactions within the application.
-
-### Database
-- A pivotal component for storing essential data pertinent to the hybrid cloud application.
-
-### On/Off Premise Cloud
-- Indicates the hybrid model of cloud hosting, encompassing both on-premise and off-premise cloud services.
-
-### Cloud Hosted Web Server
-- Represents a web server infrastructure hosted within the cloud environment.
-
-### z/OS LPAR
+### Specialist
 - Denotes a mainframe environment, encapsulating components specific to mainframe technology within the z/OS Logical Partition (LPAR).
 
-### Batch Job
+## Batch Job
+
+### Entry Level
+- Signifies running batch processes on the mainframe.
+
+### Specialist
 - Represents the execution of batch processing activities within the mainframe environment.
 
-### CICS Application
+## CICS Application
+
+### Entry Level
+- Related to mainframe applications under the Customer Information Control System (CICS).
+
+### Specialist
 - Pertains to applications running under the Customer Information Control System (CICS) within the mainframe context.
+
+
