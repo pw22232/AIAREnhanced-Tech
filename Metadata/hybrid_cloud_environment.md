@@ -47,6 +47,68 @@
 - The "CICS application" component relates to Customer Information Control System (CICS) applications on the mainframe.
 
 
+# Stakholders
+
+## General Information
+
+### Entry Level
+- Hybrid cloud environments mix different technologies for better efficiency, security, and performance.
+- Testing everything together in these environments can be tricky.
+- Galasa makes this testing easier with its comprehensive testing framework.
+- It allows testing of applications on different platforms (like z/OS and Cloud) and with various technologies.
+- Keeping all test results and details in one place makes it easier to create reports and figure out what went wrong.
+
+### Specialist
+- Hybrid cloud environments integrate disparate platforms and technologies to achieve optimal efficiency, security, and performance.
+- Conducting end-to-end integration testing in such setups poses significant challenges.
+- Galasa addresses these challenges by offering a holistic testing framework.
+- The framework facilitates the testing of applications across diverse platforms (such as z/OS and Cloud) and various technologies.
+- Centralized storage of test results and artifacts streamlines reporting and facilitates detailed failure analysis.
+
+## Components 
+
+## Galasa Test
+
+### Entry Level
+- Galasa test is vital for checking everything works together in a hybrid cloud.
+- You can start it from a coding tool or as part of an automated software release process.
+- Galasa sets up the test environment, creates test data, runs the test, and checks the results.
+- All test results and details are kept together for easy reporting and problem-solving.
+
+### Specialist
+- The Galasa test is integral to comprehensive end-to-end integration testing within a hybrid cloud framework.
+- It can be initiated either through an Integrated Development Environment (IDE) or as a component of a Continuous Integration/Continuous Deployment (CI/CD) pipeline.
+- Galasa is responsible for initializing the test environment, generating necessary test data, executing the test, and validating outcomes.
+- All test results and artifacts are centrally archived, enabling streamlined report generation and detailed failure diagnostics.
+
+### 3270 Emulator 
+- This is used to imitate interactions with mainframe computers in a hybrid cloud environment.
+
+### Application
+- Represents the central part of the hybrid cloud application.
+- Includes several important parts for thorough testing.
+
+### Web Browser
+- Symbolizes the user interface and how users interact with the application.
+
+### Database
+- Stores vital data for the hybrid cloud application.
+
+### On/Off Premise Cloud
+- Indicates both internal and external cloud hosting options.
+
+### Cloud Hosted Web Server
+- A web server that's run in the cloud.
+
+### z/OS LPAR
+- Represents a mainframe computing environment.
+- Includes components specific to mainframe technology.
+
+### Batch Job
+- Signifies running batch processes on the mainframe.
+
+### CICS Application
+- Related to mainframe applications under the Customer Information Control System (CICS).
 
 
 
@@ -55,5 +117,32 @@
 
 
 
+#### Components 
 
 
+### 3270 Emulator 
+- A critical component for emulating interactions with mainframe systems in a hybrid cloud configuration.
+
+### Application
+- The "Application" represents the core entity within the hybrid cloud application, encompassing key components for end-to-end testing.
+
+### Web Browser
+- Represents the user interface component and user interactions within the application.
+
+### Database
+- A pivotal component for storing essential data pertinent to the hybrid cloud application.
+
+### On/Off Premise Cloud
+- Indicates the hybrid model of cloud hosting, encompassing both on-premise and off-premise cloud services.
+
+### Cloud Hosted Web Server
+- Represents a web server infrastructure hosted within the cloud environment.
+
+### z/OS LPAR
+- Denotes a mainframe environment, encapsulating components specific to mainframe technology within the z/OS Logical Partition (LPAR).
+
+### Batch Job
+- Represents the execution of batch processing activities within the mainframe environment.
+
+### CICS Application
+- Pertains to applications running under the Customer Information Control System (CICS) within the mainframe context.
