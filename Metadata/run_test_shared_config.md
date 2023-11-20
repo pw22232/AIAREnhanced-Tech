@@ -28,4 +28,60 @@
 - It provides the necessary settings and parameters for tests.
 
 
+# Stakeholders
 
+## General Information
+
+### Entry Level
+
+- To run tests using the same settings as others, you set Galasa to use the same online storage location for these settings.
+- Galasa runs on your computer but uses settings from this online storage.
+- Passwords and similar private information are taken from a file on your computer.
+- This mix of local and shared resources makes it easier to run tests.
+- All the results from your tests are kept on your computer.
+
+### Specialist
+
+- Running tests locally with shared configurations necessitates configuring the Galasa bootstrap with the URL of the remote Galasa Ecosystem storing these configurations.
+- The Galasa Framework operates within the local Java Virtual Machine (JVM), pulling configuration data from the remote ecosystem.
+- Credentials and sensitive properties are sourced from a local file during test execution.
+- This approach combines local test execution with the advantages of shared configurations, streamlining the testing process.
+- Test results and artifacts are retained in the local file system.
+
+## Components
+
+### Entry Level
+
+**Local JVM (Nested Components - Executing):**
+- This is where your computer runs the Java part of Galasa.
+- Galasa and your test scripts run here.
+- Your tests happen in this Java environment on your computer.
+
+**Local File System (Nested Components - Bootstrap and Stored):**
+- Your computer's storage is used for keeping test information.
+- A special setup file on your computer, called "Bootstrap," has a link to the shared settings online.
+- Results and details of your tests are stored here.
+- Your tests use both these local files and the shared settings from online.
+
+**Remote Ecosystem (Stored - Galasa Configuration):**
+- An online space stores settings used by everyone running Galasa tests.
+- These settings are kept online for everyone to access during tests.
+- It has all the necessary settings for the tests.
+
+### Specialist
+
+**Local JVM (Nested Components - Executing):**
+- The Local JVM denotes the Java Virtual Machine executing on the user's machine.
+- It hosts the Galasa Framework and the Testcase Class, which together facilitate the test execution.
+- Tests are initiated and carried out within this local JVM context.
+
+**Local File System (Nested Components - Bootstrap and Stored):**
+- The Local File System acts as a repository for local test execution, storing configurations and results.
+- The "Bootstrap" component is pivotal, containing the configuration details and linking to the remote Galasa Ecosystem for shared configurations.
+- The "Test Results" component is responsible for storing the outcomes and artifacts of locally executed tests.
+- Local testing leverages the hybrid model, utilizing local storage while drawing on shared configurations from the remote ecosystem.
+
+**Remote Ecosystem (Stored - Galasa Configuration):**
+- The Remote Ecosystem is the central repository for shared Galasa test configurations.
+- These configurations are maintained within the ecosystem, providing uniformity and consistency in test settings.
+- It is the source for all requisite configurations and parameters essential for the execution of Galasa tests.
