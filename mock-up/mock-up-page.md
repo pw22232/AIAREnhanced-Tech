@@ -4,7 +4,7 @@ This is a preliminary page illustrating the concepts and ideas we were exploring
 
 ## Table of Contents
   - [Initial Concept](#Initial-Concept)
-  - [Second Concept](#Table-of-Contents)
+  - [Our MVP](#Our-MVP)
   - [Third Concept](#Project-Summary)
   - [Forth Concept](#Ambitions-for-final-product)
 
@@ -39,3 +39,19 @@ Drawing from this example as our reference, we created an original mock-up desig
 ![Mockup Picture 2](picture_2.png)
 
 Our initial concept sets the stage for development, providing a solid base from which to evolve. Below, you can trace the progression and refinement of our early designs as they undergo our iterative design process.
+
+## Our MVP
+
+With our initial design concepts now in place and a clear vision of what we aim to create, plus the permission of IBM to build pretty much anything. It was time to start developing.
+
+Our first steps were getting Xcode running on our machines, learning how to develop in swift and then unserstanding how it works instrinsicly with ArKit to create the augmented experience we and most importantly the user would desire.
+
+video
+
+As you can see here, we have successfully integrated the iPhone's camera functionality into our application. This integration allows us to effectively anchor virtual objects, like this block, to the real-world environment captured by the camera. Additionally, we have implemented gesture recognition capabilities. As demonstrated, users can interact with the application by tapping the screen, which triggers the spawning of additional blue blocks in the augmented space.
+
+Our next step was being able to import a 3D model into our world; blue blocks won't quite give the user the experince we are aiming for.
+
+Video
+
+This is a video the MVB, if your squint your eyes and look closly you can see the purple globe sat on the desk. This development marks a significant milestone in our project. We have successfully demonstrated the capability to import files in the .usdz format into our application. 
