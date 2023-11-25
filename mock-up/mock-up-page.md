@@ -66,7 +66,7 @@ This is a video the MVB, if your squint your eyes and look closly you can see th
 
 A critical component of our project involves ensuring that the correct diagram is spawned at the precise moment it is needed. Determining the most effective method for this was challenging. Each diagram requires a distinct marker that the camera can recognize, which then prompts the system to display the appropriate diagram. Following consultations with IBM, we decided that assigning a unique QR code to each diagram would be the most efficient solution. This approach allows for accurate and timely activation of the diagrams within our application.
 
-Video
+![QR Code](qr_code.gif)
 
 The accompanying video illustrates our success in spawning an object using a QR code. Crucially, the application also accurately recognizes the spatial plane of the QR code. This allows for the diagram to be projected at a 90-degree angle relative to the plane.
 
