@@ -80,7 +80,15 @@ This next step is crucial, if we can somehow get this pin into our augmented env
 
 photo
 
+This is the pin successfully implemented into our augmented environment.
 
+### The Diagram
+
+We looked back to Blender to design diagrams that reflected those found in the Galasa Documentation.
+
+videos
+
+After burning £400 on a 'Welcome to Blender' crash course and guzzling half a dozen double dose adderalls we made our 3D Remote Ecosystem diagrams.
 
 ### Our MVP
 
