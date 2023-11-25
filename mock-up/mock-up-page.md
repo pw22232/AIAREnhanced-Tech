@@ -71,3 +71,31 @@ Video
 The accompanying video illustrates our success in spawning an object using a QR code. Crucially, the application also accurately recognizes the spatial plane of the QR code. This allows for the diagram to be projected at a 90-degree angle relative to the plane.
 
 ### The Pin
+
+As engaging as purple globes are we needed diagrams which reflected those in the Galasa Documentation. We looked to Blender a 3D creation suite to start to build out our diagrams. After 22 red bulls and several all-nighters we present you this pin...
+
+photo
+
+This next step is crucial, if we can somehow get this pin into our augmented environment, this means we can get almost anything into our mobile application and we'll have this project wrapped up by mid-December. This invloves several pluggins to make sure we exporting this file in correct format.
+
+photo
+
+
+
+### Our MVP
+
+So... now we spawn objects into our augmented envirronment; we can these objects to spwan in once the camera recongnises a unqiue identifyable and we can create diagrams in blender that we can import into our application. The next step was to put these all together.
+
+Our MVP demonstrates we can spawn in Galasa digarams when promted by the documentation.
+
+video
+
+### Next Steps and the Challenges we Face
+
+* Our application will allow the user to navigate through the diagram to enhance his/her leanring. When navigating this will invlove the augmented picture to update with user gestures. Smoothly transistioning between augmented diagrams is a challange we will need to work through.
+
+* Watson will be an AI assistant that can help the user understand the documentation. We need to impliment watson into the application and importantly align him in such a way that he assists the user.
+
+* We want to develop the application so that it can be used by users with a range of technical abilities. This will mean designing multiple implementations of almost everything.
+
+* The Remote Ecosystem example is an easy one. We need to figure out how we are going to approach more complex diagrams, and convey the information effectivly.
