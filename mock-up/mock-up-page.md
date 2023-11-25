@@ -107,3 +107,5 @@ video
 * We want to develop the application so that it can be used by users with a range of technical abilities. This will mean designing multiple implementations of almost everything.
 
 * The Remote Ecosystem example is an easy one. We need to figure out how we are going to approach more complex diagrams, and convey the information effectivly.
+
+* Getting IBM to sign the dotted line
