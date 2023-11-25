@@ -50,7 +50,7 @@ With our initial design concepts now in place and a clear vision of what we aim 
 
 Our first steps were getting Xcode running on our machines, learning how to develop in swift and then unserstanding how it works instrinsicly with ArKit to create the augmented experience we and most importantly the user would desire.
 
-video
+![Spwan In Block](spawn_in_block.gif)
 
 As you can see here, we have successfully integrated the iPhone's camera functionality into our application. This integration allows us to effectively anchor virtual objects, like this block, to the real-world environment captured by the camera. Additionally, we have implemented gesture recognition capabilities. As demonstrated, users can interact with the application by tapping the screen, which triggers the spawning of additional blue blocks in the augmented space.
 
