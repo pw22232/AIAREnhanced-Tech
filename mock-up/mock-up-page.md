@@ -86,7 +86,7 @@ This is the pin successfully implemented into our augmented environment.
 
 We looked back to Blender to design diagrams that reflected those found in the Galasa Documentation.
 
-videos
+![Diagram](diagram.gif)
 
 After burning £400 on a 'Welcome to Blender' crash course and guzzling half a dozen double dose adderalls we made our 3D Remote Ecosystem diagrams.
 
