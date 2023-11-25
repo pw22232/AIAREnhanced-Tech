@@ -74,11 +74,11 @@ The accompanying video illustrates our success in spawning an object using a QR 
 
 As engaging as purple globes are we needed diagrams which reflected those in the Galasa Documentation. We looked to Blender a 3D creation suite to start to build out our diagrams. After 22 red bulls and several all-nighters we present you this pin...
 
-photo
+![Pin](pin.png)
 
 This next step is crucial, if we can somehow get this pin into our augmented environment, this means we can get almost anything into our mobile application and we'll have this project wrapped up by mid-December. This invloves several pluggins to make sure we exporting this file in correct format.
 
-photo
+![Pin In AR](pin_in_ar.png)
 
 This is the pin successfully implemented into our augmented environment.
 
