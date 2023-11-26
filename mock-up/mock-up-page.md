@@ -96,7 +96,7 @@ So... now we spawn objects into our augmented envirronment; we can these objects
 
 Our MVP demonstrates we can spawn in Galasa diagrams when prompted by the documentation.
 
-![Diagram In AR](digram_in_ar.gif)
+![Diagram in AR](digram_in_ar.gif)
 
 ### Next Steps and the Challenges we Face
 
