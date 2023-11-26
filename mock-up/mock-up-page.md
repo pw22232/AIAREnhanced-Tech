@@ -26,7 +26,7 @@ Using this example as a starting point, we crafted our own unique mockup design.
 
 ![Mockup Picture 1](picture_1.png)
 
-This design presents a visually engaging and user-friendly interface, enabling users to interact seamlessly with their documentation. In the lower left corner, you'll notice 'Watson,' a virtual assistant designed to aid in understanding the documentation. Watson is envisioned as a 3D figure, skillfully anchored within the 3D space captured by the user's camera, enhancing the overall interactive experience.
+This design presents a visually engaging and user-friendly interface, enabling users to interact seamlessly with their documentation. In the lower left corner, you'll notice 'Watson', a virtual assistant designed to aid in understanding the documentation. Watson is envisioned as a 3D figure, skilfully anchored within the 3D space captured by the user's camera, enhancing the overall interactive experience.
 
 ### Interacting with the Diagram
 
