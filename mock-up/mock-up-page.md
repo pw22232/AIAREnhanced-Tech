@@ -94,7 +94,7 @@ After burning £400 on a 'Welcome to Blender' crash course and guzzling half a d
 
 So... now we spawn objects into our augmented envirronment; we can these objects to spwan in once the camera recongnises a unqiue identifyable and we can create diagrams in blender that we can import into our application. The next step was to put these all together.
 
-Our MVP demonstrates we can spawn in Galasa digarams when promted by the documentation.
+Our MVP demonstrates we can spawn in Galasa diagrams when prompted by the documentation.
 
 ![Diagram In AR](digram_in_ar.gif)
 
