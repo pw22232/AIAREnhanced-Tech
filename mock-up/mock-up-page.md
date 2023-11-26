@@ -10,7 +10,7 @@ This is a preliminary page illustrating the concepts and ideas we were exploring
 
 ### First Ideas
 
-These are the very first ideas we had when thinking about creating the augmented reality experience. We had a lot ideas about what this might look like in theory; we also had to balance this with what was feasable given the scope of the project.
+These are the very first ideas we had when thinking about creating the augmented reality experience. We had a lot of ideas about what this might look like in theory; we also had to balance this with what was feasible given the scope of the project.
 
 This initial Mockup presented to client was based upon the "Remote Ecosystem Diagram" 
 
