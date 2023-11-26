@@ -60,7 +60,7 @@ Our next step was being able to import a 3D model into our world; blue blocks wo
 
 ![Import Globe](import_globe.gif)
 
-This is a video the MVB, if your squint your eyes and look closly you can see the purple globe sat on the desk. This development marks a significant milestone in our project. We have successfully demonstrated the capability to import files in the .usdz format into our application. 
+This is a video the MVB, if your squint your eyes and look closely you can see the purple globe sat on the desk. This development marks a significant milestone in our project. We have successfully demonstrated the capability to import files in the .usdz format into our application.
 
 ### The Distinct Marker
 
