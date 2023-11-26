@@ -102,7 +102,7 @@ Our MVP demonstrates we can spawn in Galasa diagrams when prompted by the docume
 
 * Our application will allow the user to navigate through the diagram to enhance their learning. When navigating, this will involve the augmented picture to update with user gestures. Smoothly transitioning between augmented diagrams is a challenge we will need to work through.
 
-* Watson will be an AI assistant that can help the user understand the documentation. We need to impliment watson into the application and importantly align him in such a way that he assists the user.
+* Watson will be an AI assistant that can help the user understand the documentation. We need to implement Watson into the application and more importantly align him in such a way that he assists the user.
 
 * We want to develop the application so that it can be used by users with a range of technical abilities. This will mean designing multiple implementations of almost everything.
 
