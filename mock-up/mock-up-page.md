@@ -32,7 +32,7 @@ This design presents a visually engaging and user-friendly interface, enabling u
 
 When users interact with an element within the augmented reality diagram, it will expand to offer additional, in-depth details about that specific section of the documentation. This interactive feature is designed to enhance understanding by providing context-sensitive information on-demand.
 
-Our  design was mapped by this specific example.
+Our design was mapped by this specific example.
 
 ![Second Image](IMG_1610.PNG)
 
