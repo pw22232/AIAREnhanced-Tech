@@ -48,7 +48,7 @@ Our initial concept sets the stage for development, providing a solid base from 
 
 With our initial design concepts now in place and a clear vision of what we aim to create, plus the permission of IBM to build pretty much anything. It was time to start developing.
 
-Our first steps were getting Xcode running on our machines, learning how to develop in swift and then unserstanding how it works instrinsicly with ArKit to create the augmented experience we and most importantly the user would desire.
+Our first steps were getting Xcode running on our machines, learning how to develop in swift and then understanding how it works intrinsically with ARKit to create the augmented experience we and most importantly the user would desire.
 
 ![Spwan In Block](spawn_in_block.gif)
 
