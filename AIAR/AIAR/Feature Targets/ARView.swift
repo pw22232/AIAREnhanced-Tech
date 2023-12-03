@@ -2,48 +2,50 @@ import ARKit
 import RealityKit
 import SwiftUI
 
-class AIARView: ARView {
+class AIARView: ARView, ARSessionDelegate {
+    
     required init(frame frameRect: CGRect) {
         super.init(frame: frameRect)
-        placeBlock()
+        setupARSession()
     }
-
+    
     required init?(coder decoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-
-    func placeBlock() {
-        let block = MeshResource.generateBox(size: 0.2)
+    
+    func setupARSession() {
+        self.session.delegate = self
+        let configuration = ARWorldTrackingConfiguration()
+        
+        // Load the QR code image from the asset catalog
+        if let qrImage = UIImage(named: "qrcode"),
+           let qrCGImage = qrImage.cgImage {
+            let referenceImage = ARReferenceImage(qrCGImage, orientation: .up, physicalWidth: 0.05) // Adjust the physicalWidth as needed
+            referenceImage.name = "qrcode"
+            configuration.detectionImages = [referenceImage]
+        }
+        
+        session.run(configuration)
+    }
+    
+    func placeBlock(at transform: simd_float4x4) {
+        let block = MeshResource.generateBox(size: 0.1)
         let material = SimpleMaterial(color: .white, isMetallic: false)
         let entity = ModelEntity(mesh: block, materials: [material])
-
-        let anchor = AnchorEntity(plane: .horizontal)
+        
+        let anchor = AnchorEntity(world: transform)
         anchor.addChild(entity)
         scene.addAnchor(anchor)
-
-        // Add the tap gesture directly to the view
-        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(handleTap(_:)))
-        self.addGestureRecognizer(tapGesture)
     }
-
-
-    @objc func handleTap(_ sender: UITapGestureRecognizer) {
-        
-        let location = sender.location(in: self)
-        let results = self.raycast(from: location, allowing: .existingPlaneGeometry, alignment: .horizontal)
-
-        if let firstResult = results.first {
-            let newBlock = MeshResource.generateBox(size: 0.1)
-            let material = SimpleMaterial(color: .blue, isMetallic: false)
-            let newEntity = ModelEntity(mesh: newBlock, materials: [material])
-
-            let newAnchor = AnchorEntity(world: firstResult.worldTransform)
-            newAnchor.addChild(newEntity)
-            scene.addAnchor(newAnchor)
+    
+    // ARSessionDelegate method
+    func session(_ session: ARSession, didAdd anchors: [ARAnchor]) {
+        for anchor in anchors {
+            if let imageAnchor = anchor as? ARImageAnchor, imageAnchor.referenceImage.name == "qrcode" {
+                placeBlock(at: imageAnchor.transform)
+                print("QR code scanned -----$(*£&*@($&*&@%(*&@")
+            }
         }
     }
 }
 
-struct Interaction: Component {
-    let gesture: UITapGestureRecognizer
-}
