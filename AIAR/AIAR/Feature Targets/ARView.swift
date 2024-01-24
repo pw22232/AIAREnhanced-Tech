@@ -30,7 +30,7 @@ class AIARView: ARView, ARSessionDelegate {
     
     func placeBlock(at transform: simd_float4x4) {
         let block = MeshResource.generateBox(size: 0.1)
-        let material = SimpleMaterial(color: .white, isMetallic: false)
+        let material = SimpleMaterial(color: .white, isMetallic: true)
         let entity = ModelEntity(mesh: block, materials: [material])
         
         let anchor = AnchorEntity(world: transform)
