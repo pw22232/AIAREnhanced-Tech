@@ -14,7 +14,7 @@
 **Galasa Servers:**
 - Engine Controller sets up and manages test engines.
 - Resource Management takes care of cleaning up and getting rid of resources that are no longer needed.
-- API Server is the main control center, used by coding tools and automated processes.
+- API Server is the main control centre, used by coding tools and automated processes.
 - Bootstrap Server holds the initial setup information.
 - Web UI (coming soon) will let you manage and analyze tests from a dashboard.
 - LDAP authentication server (coming soon) will use LDAP for logins.
