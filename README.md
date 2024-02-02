@@ -43,7 +43,7 @@ By tailoring your product to meet the needs of these three personas, we can ensu
 
 ## User Stories
 
-**User 1:** As a Test Engineer I want to be able to scan a QR code on the Galasa Documentation which will reveal an augmented diagram such that I can will have their learning process streamlined and made more engaing.
+**User 1:** As a Test Engineer I want to be able to scan a QR code on the Galasa Documentation which will reveal an augmented diagram such that I can have my learning process streamlined and made more engaging.
 
 **User 2:** As a Specialist Engineer I want to be able to access more detailed information about the documentation such that this will provide me with a more broad overview of the component.
 
