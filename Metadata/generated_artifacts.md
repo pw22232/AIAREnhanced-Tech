@@ -74,7 +74,6 @@
 ### Importing Projects:
 - **Eclipse Integration:** There are steps on how to add these projects to Eclipse, a software development tool, to make working on them easier.
 
-
 ## Specialist
 
 ### Generated Artifacts:
