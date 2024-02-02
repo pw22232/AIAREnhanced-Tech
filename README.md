@@ -47,7 +47,7 @@ By tailoring your product to meet the needs of these three personas, we can ensu
 
 **User 2:** As a Specialist Engineer I want to be able to access more detailed information about the documentation such that this will provide me with a more broad overview of the component.
 
-**User 3:** As a Software Engineering Manager at IBM I want to deliver an augmented application to our test engineers such that their learning experienced will be enhanced.
+**User 3:** As a Software Engineering Manager at IBM I want to deliver an augmented application to our test engineers such that their learning experience will be enhanced.
 
 
 ## Stakeholders
