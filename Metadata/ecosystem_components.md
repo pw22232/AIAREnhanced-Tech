@@ -46,7 +46,7 @@
 - Creates Docker containers or Kubernetes pods for tests.
 
 **API Server:**
-- The main control center for the Galasa Ecosystem.
+- The main control centre for the Galasa Ecosystem.
 - Used for sending tests and getting results from coding tools and pipelines.
 
 **Resource Manager:**
