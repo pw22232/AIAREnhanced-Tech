@@ -54,6 +54,13 @@ By tailoring your product to meet the needs of these three personas, we can ensu
 ### Prerequisites
 
 - Download Xcode for Swift
+- Clone the repository using the command `git clone https://github.com/spe-uob/2023-AIAREnhancedTech`
+
+## User Instructions
+
+### Developer Instructions
+  
+- Contact bn2207@bristol.ac.uk if you wish to develop so that you can be added to the XCode developer team
 
 ### Technologies
 
