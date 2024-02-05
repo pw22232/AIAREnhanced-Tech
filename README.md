@@ -56,12 +56,6 @@ By tailoring your product to meet the needs of these three personas, we can ensu
 - Download Xcode for Swift
 - Clone the repository using the command `git clone https://github.com/spe-uob/2023-AIAREnhancedTech`
 
-## User Instructions
-
-### Developer Instructions
-  
-- Contact bn2207@bristol.ac.uk if you wish to develop so that you can be added to the XCode developer team
-
 ### Technologies
 
 - **Swift**  -  As a team, we have chosen to utilize the Swift programming language to develop our application. Swift is a modern, open-source programming language developed by Apple. Swift offers performance improvements over Objective-C and features a clean and concise syntax making it a popular choice for building iOS applications.
@@ -69,6 +63,24 @@ By tailoring your product to meet the needs of these three personas, we can ensu
 - **AR Kit 6**  -  ARKit is a software development framework by Apple that enables the creation of augmented reality (AR) experiences on iOS devices. ARKit has been used to develop a wide range of AR applications, including many educational tools.  It provides tools and resources for developers to seamlessly blend digital content with the real world through the device's camera and sensors.
   
 - **IBM's AI Watson Speech to Text, Text to Speech**  -  IBM's Watson is an artificial intelligence system developed by IBM. Watson is powered by advanced machine learning and natural language processing algorithms. Watson Speech to Text and Text to Speech are services within IBM's Watson AI platform. We will look to harness Watson’s Text to Speech service to transform written text into lifelike speech, facilitating the application's interactive voice response systems.
+
+## User Instructions
+
+### Developer Instructions
+  
+- Contact bn2207@bristol.ac.uk if you wish to develop so that you can be added to the XCode developer team
+
+### Setup and Build
+
+- Clone the git repository using the command `git clone https://github.com/spe-uob/2023-AIAREnhancedTech`
+- Open the project XCode
+- Click the `Product` tab
+- Then click `Build`
+
+### Running 
+
+- Select a device on the simulator or plug in your physical device
+- Click the play button in the top left
 
 ## Project Management Tools
 
