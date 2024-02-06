@@ -43,8 +43,8 @@ struct ContentView: View {
     
     func loadImage() {
         let storageRef = storage.reference()
-//        let imageRef = storageRef.child("models/model1/bear.jpg")
-        let imageRef = storageRef.child("models/model1/cup_saucer_set.usdz")
+        let imageRef = storageRef.child("models/model1/bear.jpg")
+//        let imageRef = storageRef.child("models/model1/cup_saucer_set.usdz")
 
         
         imageRef.downloadURL { (url, error) in
