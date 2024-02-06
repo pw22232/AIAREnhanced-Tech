@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		773D7D102B716E6900D07074 /* AuthenticationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 773D7D0F2B716E6900D07074 /* AuthenticationManager.swift */; };
 		775970662B619E5D00C501F4 /* DatabaseDemoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 775970652B619E5D00C501F4 /* DatabaseDemoApp.swift */; };
 		775970682B619E5D00C501F4 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 775970672B619E5D00C501F4 /* ContentView.swift */; };
 		7759706A2B619E5E00C501F4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 775970692B619E5E00C501F4 /* Assets.xcassets */; };
@@ -40,6 +41,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		773D7D0F2B716E6900D07074 /* AuthenticationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationManager.swift; sourceTree = "<group>"; };
 		775970622B619E5D00C501F4 /* DatabaseDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DatabaseDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		775970652B619E5D00C501F4 /* DatabaseDemoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseDemoApp.swift; sourceTree = "<group>"; };
 		775970672B619E5D00C501F4 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -110,6 +112,7 @@
 				775970672B619E5D00C501F4 /* ContentView.swift */,
 				775970692B619E5E00C501F4 /* Assets.xcassets */,
 				7759706B2B619E5E00C501F4 /* Preview Content */,
+				773D7D0F2B716E6900D07074 /* AuthenticationManager.swift */,
 			);
 			path = DatabaseDemo;
 			sourceTree = "<group>";
@@ -287,6 +290,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				773D7D102B716E6900D07074 /* AuthenticationManager.swift in Sources */,
 				775970682B619E5D00C501F4 /* ContentView.swift in Sources */,
 				775970662B619E5D00C501F4 /* DatabaseDemoApp.swift in Sources */,
 			);
