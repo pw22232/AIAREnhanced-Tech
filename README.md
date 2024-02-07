@@ -68,7 +68,7 @@ By tailoring your product to meet the needs of these three personas, we can ensu
 
 ### Developer Instructions
   
-- Contact bn2207@bristol.ac.uk if you wish to develop so that you can be added to the XCode developer team
+- Contact bn22907@bristol.ac.uk if you wish to develop so that you can be added to the XCode developer team
 
 ### Setup and Build
 
