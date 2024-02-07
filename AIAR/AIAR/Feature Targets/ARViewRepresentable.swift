@@ -1,10 +1,18 @@
+//
+//  ARViewRepresentable.swift
+//  AIAR
+//
+//  Created by 陈若鑫 on 31/01/2024.
+//
+
 import SwiftUI
+import RealityKit
 
 struct ARViewRepresentable: UIViewRepresentable {
-    func makeUIView(context: Context) -> AIARView {
-        let arView = AIARView(frame: UIScreen.main.bounds)
-        return arView
+    func makeUIView(context: Context) -> AARView {
+        return AARView()
     }
-
-    func updateUIView(_ uiView: AIARView, context: Context) {}
+    
+    func updateUIView(_ uiView: AARView, context: Context) { }
 }
+
