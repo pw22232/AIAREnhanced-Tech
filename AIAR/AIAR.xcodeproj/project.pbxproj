@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		041016F82B73B29C0099E63D /* ARView_QR.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041016F72B73B29C0099E63D /* ARView_QR.swift */; };
 		A7A149FB2AE86918009BC8A4 /* AIARApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7A149FA2AE86918009BC8A4 /* AIARApp.swift */; };
 		A7A149FD2AE86918009BC8A4 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7A149FC2AE86918009BC8A4 /* ContentView.swift */; };
 		A7A149FF2AE86918009BC8A4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A7A149FE2AE86918009BC8A4 /* Assets.xcassets */; };
@@ -36,6 +37,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		041016F72B73B29C0099E63D /* ARView_QR.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARView_QR.swift; sourceTree = "<group>"; };
 		A7A149F72AE86918009BC8A4 /* AIAR.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AIAR.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A7A149FA2AE86918009BC8A4 /* AIARApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AIARApp.swift; sourceTree = "<group>"; };
 		A7A149FC2AE86918009BC8A4 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -139,6 +141,7 @@
 				A7A149FC2AE86918009BC8A4 /* ContentView.swift */,
 				A7A14A252AE869E1009BC8A4 /* ARView.swift */,
 				A7A14A272AE86BA4009BC8A4 /* ARViewRepresentable.swift */,
+				041016F72B73B29C0099E63D /* ARView_QR.swift */,
 			);
 			path = "Feature Targets";
 			sourceTree = "<group>";
@@ -275,6 +278,7 @@
 			files = (
 				A7A149FD2AE86918009BC8A4 /* ContentView.swift in Sources */,
 				A7A149FB2AE86918009BC8A4 /* AIARApp.swift in Sources */,
+				041016F82B73B29C0099E63D /* ARView_QR.swift in Sources */,
 				A7A14A282AE86BA4009BC8A4 /* ARViewRepresentable.swift in Sources */,
 				A7A14A262AE869E1009BC8A4 /* ARView.swift in Sources */,
 			);
