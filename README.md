@@ -41,6 +41,15 @@ By tailoring your product to meet the needs of these three personas, we can ensu
 
 3. **Expert - Mastering Galasa**: Experts in Galasa are looking to fine-tune their understanding and master the tool's nuances. They seek in-depth technical documentation, detailed reference guides, and advanced troubleshooting resources. The product will cater for an advanced audience by providing access to extensive documentation and an AI assistant who the user can talk with to perfect his understanding of Galasa
 
+## User Stories
+
+**User 1:** As a Test Engineer I want to be able to scan a QR code on the Galasa Documentation which will reveal an augmented diagram such that I can have my learning process streamlined and made more engaging.
+
+**User 2:** As a Specialist Engineer I want to be able to access more detailed information about the documentation such that this will provide me with a more broad overview of the component.
+
+**User 3:** As a Software Engineering Manager at IBM I want to deliver an augmented application to our test engineers such that their learning experience will be enhanced.
+
+
 ## Stakeholders
 
 | Stakeholder | Name | Role |
