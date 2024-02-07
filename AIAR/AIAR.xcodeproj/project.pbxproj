@@ -7,10 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		041016F82B73B29C0099E63D /* ARView_QR.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041016F72B73B29C0099E63D /* ARView_QR.swift */; };
-		A7A14A0C2AE86919009BC8A4 /* AIARTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7A14A0B2AE86919009BC8A4 /* AIARTests.swift */; };
-		A7A14A162AE86919009BC8A4 /* AIARUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7A14A152AE86919009BC8A4 /* AIARUITests.swift */; };
-		A7A14A182AE86919009BC8A4 /* AIARUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7A14A172AE86919009BC8A4 /* AIARUITestsLaunchTests.swift */; };
 		A76876EB2B6ADB8F00F95E44 /* AIARApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A76876EA2B6ADB8F00F95E44 /* AIARApp.swift */; };
 		A76876ED2B6ADB8F00F95E44 /* ARACTUAL.swift in Sources */ = {isa = PBXBuildFile; fileRef = A76876EC2B6ADB8F00F95E44 /* ARACTUAL.swift */; };
 		A76876EF2B6ADB9000F95E44 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A76876EE2B6ADB9000F95E44 /* Assets.xcassets */; };
@@ -43,13 +39,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		041016F72B73B29C0099E63D /* ARView_QR.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARView_QR.swift; sourceTree = "<group>"; };
-		A7A14A072AE86919009BC8A4 /* AIARTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AIARTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		A7A14A0B2AE86919009BC8A4 /* AIARTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AIARTests.swift; sourceTree = "<group>"; };
-		A7A14A112AE86919009BC8A4 /* AIARUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AIARUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		A7A14A152AE86919009BC8A4 /* AIARUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AIARUITests.swift; sourceTree = "<group>"; };
-		A7A14A172AE86919009BC8A4 /* AIARUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AIARUITestsLaunchTests.swift; sourceTree = "<group>"; };
-
 		A76876E72B6ADB8F00F95E44 /* AIAR.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AIAR.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A76876EA2B6ADB8F00F95E44 /* AIARApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AIARApp.swift; sourceTree = "<group>"; };
 		A76876EC2B6ADB8F00F95E44 /* ARACTUAL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARACTUAL.swift; sourceTree = "<group>"; };
@@ -104,8 +93,6 @@
 			isa = PBXGroup;
 			children = (
 				A76876E72B6ADB8F00F95E44 /* AIAR.app */,
-				A76876F72B6ADB9000F95E44 /* AIARTests.xctest */,
-				A76877012B6ADB9000F95E44 /* AIARUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -134,7 +121,6 @@
 		A76876FA2B6ADB9000F95E44 /* AIARTests */ = {
 			isa = PBXGroup;
 			children = (
-				A76876FB2B6ADB9000F95E44 /* AIARTests.swift */,
 			);
 			path = AIARTests;
 			sourceTree = "<group>";
@@ -142,8 +128,6 @@
 		A76877042B6ADB9000F95E44 /* AIARUITests */ = {
 			isa = PBXGroup;
 			children = (
-				A76877052B6ADB9000F95E44 /* AIARUITests.swift */,
-				A76877072B6ADB9000F95E44 /* AIARUITestsLaunchTests.swift */,
 			);
 			path = AIARUITests;
 			sourceTree = "<group>";
@@ -151,8 +135,6 @@
 		A76877142B6ADBA300F95E44 /* Feature Targets */ = {
 			isa = PBXGroup;
 			children = (
-				041016F72B73B29C0099E63D /* ARView_QR.swift */,
-        
 				A76876EC2B6ADB8F00F95E44 /* ARACTUAL.swift */,
 				A76877152B6ADC1700F95E44 /* ARAction.swift */,
 				A76877172B6ADC2900F95E44 /* ARManager.swift */,
@@ -199,7 +181,6 @@
 			);
 			name = AIARTests;
 			productName = AIARTests;
-			productReference = A76876F72B6ADB9000F95E44 /* AIARTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 		A76877002B6ADB9000F95E44 /* AIARUITests */ = {
@@ -217,7 +198,6 @@
 			);
 			name = AIARUITests;
 			productName = AIARUITests;
-			productReference = A76877012B6ADB9000F95E44 /* AIARUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -294,8 +274,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				041016F82B73B29C0099E63D /* ARView_QR.swift in Sources */,
-
 				A768771A2B6ADC3F00F95E44 /* ARView.swift in Sources */,
 				A76877182B6ADC2A00F95E44 /* ARManager.swift in Sources */,
 				A768771C2B6ADC5E00F95E44 /* ARViewRepresentable.swift in Sources */,
@@ -313,7 +291,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A76876FC2B6ADB9000F95E44 /* AIARTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -321,8 +298,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A76877062B6ADB9000F95E44 /* AIARUITests.swift in Sources */,
-				A76877082B6ADB9000F95E44 /* AIARUITestsLaunchTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -477,18 +452,18 @@
 				INFOPLIST_KEY_LSApplicationCategoryType = "";
 				INFOPLIST_KEY_NSCameraUsageDescription = "Needed to show AR View";
 				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "Allows to save QR Code";
-
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.1;
-				PRODUCT_BUNDLE_IDENTIFIER = "-.com.galasa.stuart";
+				MARKETING_VERSION = 1.2;
+				PRODUCT_BUNDLE_IDENTIFIER = com.galasa.stuart;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -512,17 +487,17 @@
 				INFOPLIST_KEY_LSApplicationCategoryType = "";
 				INFOPLIST_KEY_NSCameraUsageDescription = "Needed to show AR View";
 				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "Allows to save QR Code";
-
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.1;
+				MARKETING_VERSION = 1.2;
 				PRODUCT_BUNDLE_IDENTIFIER = com.galasa.stuart;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -542,7 +517,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "-.com.galasa.stuart";
+				PRODUCT_BUNDLE_IDENTIFIER = com.galasa.stuart;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
@@ -577,9 +552,10 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = MWMP5VYB7V;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "-.AIARUITests";
+				PRODUCT_BUNDLE_IDENTIFIER = com.galasa.stuart;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
