@@ -27,11 +27,7 @@ struct ContentView: View {
                             .cornerRadius(8)
                     }
                 }
-            }
-            //            .toolbar {
-            //                            Text("Main Page") // This sets the title in the toolbar
-            //                        }
-            
+            } 
         }
     }
 }

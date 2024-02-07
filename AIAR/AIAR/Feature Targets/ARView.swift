@@ -10,6 +10,7 @@ import Combine
 import SwiftUI
 import RealityKit
 
+
 class AARView: ARView {
     required init(frame frameRect: CGRect) {
         super.init(frame: frameRect)
@@ -65,6 +66,10 @@ class AARView: ARView {
         scene.addAnchor(anchor)
     }
     
+
+    // ARSessionDelegate method
+   
+
     func importRc(){
         let Boxanchor = try! BoxTest6.load场景()
         scene.anchors.append(Boxanchor)
