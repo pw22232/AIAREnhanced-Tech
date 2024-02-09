@@ -61,10 +61,10 @@ class AARView: ARView, ARSessionDelegate {
             let material = SimpleMaterial(color: UIColor(color), isMetallic: false)
             let entity = ModelEntity(mesh: block, materials: [material])
             
-            let anchor = AnchorEntity(plane: .horizontal)
-            anchor.addChild(entity)
-            
-            scene.addAnchor(anchor)
+//            let anchor = AnchorEntity(plane: .horizontal)
+//            anchor.addChild(entity)
+//            
+//            scene.addAnchor(anchor)
         }
     
     func placeBlock(at transform: simd_float4x4) {
