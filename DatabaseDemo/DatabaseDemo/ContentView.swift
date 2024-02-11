@@ -35,9 +35,19 @@ struct ContentView: View {
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
             } else {
                 Button(action: {
-                    loadImage()
                     Task {
-                        await fetchDocument()
+                        
+                        do {
+                            // fetch document
+                            let document = try await fetchDocument()
+                            
+                            // extract surl
+                            if let surl = document["surl"] as? String {
+                                loadImage(from: surl)
+                            }
+                        } catch {
+                            print("Error fetching document: \(error)")
+                        }
                     }
                 }) {
                     Text("load image")
@@ -46,22 +56,19 @@ struct ContentView: View {
         }
     }
     
-    func fetchDocument() async {
-        do {
-            let snapshot = try await db.collection("models").getDocuments()
-            for document in snapshot.documents {
-                print("\(document.documentID) => \(document.data())")
-            }
-        } catch {
-            print("\(error)")
+    func fetchDocument() async throws -> [String: Any] {
+        let snapshot = try await db.collection("models").getDocuments()
+        guard let document = snapshot.documents.first else {
+            throw NSError(domain: "Firestore", code: 404, userInfo: [NSLocalizedDescriptionKey: "Document not found"])
         }
+        return document.data()
     }
     
-    func loadImage() {
+    func loadImage(from surl: String) {
         let storageRef = storage.reference()
-        let imageRef = storageRef.child("models/model1/bear.jpg")
-//        let imageRef = storageRef.child("models/model1/cup_saucer_set.usdz")
-
+        let imageRef = storageRef.child(surl)
+        
+        // let imageRef = storageRef.child("models/model1/cup_saucer_set.usdz")
         
         imageRef.downloadURL { (url, error) in
             if let error = error {
