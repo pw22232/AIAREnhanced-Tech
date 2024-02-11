@@ -7,11 +7,13 @@
 
 import SwiftUI
 import FirebaseStorage
+import FirebaseFirestore
 
 struct ContentView: View {
 
     @State private var imageURL: URL?
     let storage = Storage.storage()
+    let db = Firestore.firestore()
     
     var body: some View {
         VStack {
@@ -34,10 +36,24 @@ struct ContentView: View {
             } else {
                 Button(action: {
                     loadImage()
+                    Task {
+                        await fetchDocument()
+                    }
                 }) {
                     Text("load image")
                 }
             }
+        }
+    }
+    
+    func fetchDocument() async {
+        do {
+            let snapshot = try await db.collection("models").getDocuments()
+            for document in snapshot.documents {
+                print("\(document.documentID) => \(document.data())")
+            }
+        } catch {
+            print("\(error)")
         }
     }
     
