@@ -1,10 +1,3 @@
-//
-//  ContentView.swift
-//  DatabaseDemo
-//
-//  Created by Peter Sheehan on 24/01/2024.
-//
-
 import SwiftUI
 import FirebaseStorage
 import CodeScanner
@@ -13,8 +6,7 @@ struct ContentView: View {
     
     let storage = Storage.storage()
     
-    @State private var imageURL: URL?
-    
+    @State private var usdzURL: URL?
     @State private var isPresentingScanner = false
     @State private var scannedCode: String = ""
     
@@ -26,7 +18,7 @@ struct ContentView: View {
                     self.scannedCode = code.string // extract string from scanned qr code
                     self.isPresentingScanner = false
                     print(scannedCode)
-                    self.loadImage(from: scannedCode)
+                    self.asyncDownloadUSDZ(from: scannedCode)
                 case .failure(let error):
                     print("\(error)")
                 }
@@ -36,25 +28,12 @@ struct ContentView: View {
     
     var body: some View {
         VStack {
-            if let imageURL = imageURL {
-                AsyncImage(url: imageURL) { phase in
-                    switch phase {
-                    case .success(let image):
-                        image
-                            .resizable()
-                            .aspectRatio(contentMode: .fit)
-                    case .failure(_):
-                        Text("Image failed to load")
-                    case .empty:
-                        ProgressView()
-                    @unknown default:
-                        ProgressView()
-                    }
-                }
-                .frame(maxWidth: .infinity, maxHeight: .infinity)
+            if let usdzURL = usdzURL {
+                // Render your USDZ model here using RealityKit or any other appropriate framework
+                Text("USDZ Model Loaded: \(usdzURL.absoluteString)")
                 
-                Button("close", role: .destructive) {
-                    self.imageURL = nil
+                Button("Close", role: .destructive) {
+                    self.usdzURL = nil
                 }
                 .padding()
                 
@@ -69,26 +48,46 @@ struct ContentView: View {
         }
     }
     
-    /// Retrieves an image from Firebase Cloud Storage located at the specified path.
-    ///
-    /// - Parameters:
-    ///   - path: The path to the image in Firebase Cloud Storage.
-    ///
-    /// - Returns: This function does not return any value.
-    func loadImage(from path: String) {
+    func asyncDownloadUSDZ(from path: String) {
         let storageRef = storage.reference()
-        let imageRef = storageRef.child(path)
+        let usdzRef = storageRef.child("\(path).usdz") // Adjust the path as needed
         
-        imageRef.downloadURL { (url, error) in
+        usdzRef.getData(maxSize: 10 * 1024 * 1024) { data, error in // Adjust the max size as needed
             if let error = error {
-                print("Error downloading image: \(error.localizedDescription)")
-            } else if let url = url {
-                imageURL = url
+                print("Error downloading USDZ file: \(error.localizedDescription)")
+                return
             }
+            
+            guard let data = data else {
+                print("Error: Empty data received for USDZ file")
+                return
+            }
+            
+            // Save the downloaded USDZ file to the local filesystem
+            self.asyncDownloadToFileSystem(data: data) { fileURL in
+                DispatchQueue.main.async {
+                    self.usdzURL = fileURL
+                }
+            }
+        }
+    }
+    
+    func asyncDownloadToFileSystem(data: Data, completion: @escaping (URL) -> Void) {
+        let fileManager = FileManager.default
+        let docsURL = fileManager.urls(for: .cachesDirectory, in: .userDomainMask).first!
+        let fileURL = docsURL.appendingPathComponent("downloadedUSDZ.usdz")
+        
+        do {
+            try data.write(to: fileURL)
+            completion(fileURL)
+        } catch {
+            print("Error saving USDZ file to filesystem: \(error.localizedDescription)")
         }
     }
 }
 
-#Preview {
-    ContentView()
+struct ContentView_Previews: PreviewProvider {
+    static var previews: some View {
+        ContentView()
+    }
 }
