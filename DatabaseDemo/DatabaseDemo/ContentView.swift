@@ -21,11 +21,14 @@ struct ContentView: View {
     var scannerSheet: some View {
         CodeScannerView(
             codeTypes: [.qr], completion: { result in
-                if case let .success(code) = result {
-                    self.scannedCode = code.string
+                switch result {
+                case .success(let code):
+                    self.scannedCode = code.string // extract string from scanned qr code
                     self.isPresentingScanner = false
                     print(scannedCode)
                     self.loadImage(from: scannedCode)
+                case .failure(let error):
+                    print("\(error)")
                 }
             }
         )
@@ -49,6 +52,12 @@ struct ContentView: View {
                     }
                 }
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
+                
+                Button("close", role: .destructive) {
+                    self.imageURL = nil
+                }
+                .padding()
+                
             } else {
                 Button("Scan QR code") {
                     self.isPresentingScanner = true
