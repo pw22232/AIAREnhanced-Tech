@@ -29,7 +29,7 @@ struct ContentView: View {
     var body: some View {
         VStack {
             if let usdzURL = usdzURL {
-                // Render your USDZ model here using RealityKit or any other appropriate framework
+                
                 Text("USDZ Model Loaded: \(usdzURL.absoluteString)")
                 
                 Button("Close", role: .destructive) {
@@ -50,9 +50,21 @@ struct ContentView: View {
     
     func asyncDownloadUSDZ(from path: String) {
         let storageRef = storage.reference()
-        let usdzRef = storageRef.child("\(path).usdz") // Adjust the path as needed
+        let usdzRef = storageRef.child("\(path).usdz")
         
-        usdzRef.getData(maxSize: 10 * 1024 * 1024) { data, error in // Adjust the max size as needed
+        usdzRef.downloadURL { url, error in
+            if let error = error {
+                print("Error getting download URL for USDZ file: \(error.localizedDescription)")
+                return
+            }
+            
+            if let downloadURL = url {
+                print("Storage path: \(usdzRef.fullPath)")
+                print("Firebase Storage URL: \(downloadURL.absoluteString)")
+            }
+        }
+        
+        usdzRef.getData(maxSize: 10 * 1024 * 1024) { data, error in
             if let error = error {
                 print("Error downloading USDZ file: \(error.localizedDescription)")
                 return
@@ -67,6 +79,7 @@ struct ContentView: View {
             self.asyncDownloadToFileSystem(data: data) { fileURL in
                 DispatchQueue.main.async {
                     self.usdzURL = fileURL
+                    print("Local USDZ File Path: \(fileURL.path)")
                 }
             }
         }
