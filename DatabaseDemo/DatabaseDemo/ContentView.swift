@@ -7,13 +7,28 @@
 
 import SwiftUI
 import FirebaseStorage
-import FirebaseFirestore
+import CodeScanner
 
 struct ContentView: View {
+    
+    @State private var isPresentingScanner = false
+    @State private var scannedCode: String = ""
 
     @State private var imageURL: URL?
     let storage = Storage.storage()
-    let db = Firestore.firestore()
+    
+    var scannerSheet: some View {
+        CodeScannerView(
+            codeTypes: [.qr], completion: { result in
+                if case let .success(code) = result {
+                    self.scannedCode = code.string
+                    self.isPresentingScanner = false
+                    print(scannedCode)
+                    self.loadImage(from: scannedCode)
+                }
+            }
+        )
+    }
     
     var body: some View {
         VStack {
@@ -34,41 +49,19 @@ struct ContentView: View {
                 }
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
             } else {
-                Button(action: {
-                    Task {
-                        
-                        do {
-                            // fetch document
-                            let document = try await fetchDocument()
-                            
-                            // extract surl
-                            if let surl = document["surl"] as? String {
-                                loadImage(from: surl)
-                            }
-                        } catch {
-                            print("Error fetching document: \(error)")
-                        }
-                    }
-                }) {
-                    Text("load image")
+                Button("Scan QR code") {
+                    self.isPresentingScanner = true
+                }
+                .sheet(isPresented: $isPresentingScanner) {
+                    self.scannerSheet
                 }
             }
         }
     }
     
-    func fetchDocument() async throws -> [String: Any] {
-        let snapshot = try await db.collection("models").getDocuments()
-        guard let document = snapshot.documents.first else {
-            throw NSError(domain: "Firestore", code: 404, userInfo: [NSLocalizedDescriptionKey: "Document not found"])
-        }
-        return document.data()
-    }
-    
-    func loadImage(from surl: String) {
+    func loadImage(from path: String) {
         let storageRef = storage.reference()
-        let imageRef = storageRef.child(surl)
-        
-        // let imageRef = storageRef.child("models/model1/cup_saucer_set.usdz")
+        let imageRef = storageRef.child(path)
         
         imageRef.downloadURL { (url, error) in
             if let error = error {
