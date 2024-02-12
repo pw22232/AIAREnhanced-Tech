@@ -11,11 +11,12 @@ import CodeScanner
 
 struct ContentView: View {
     
+    let storage = Storage.storage()
+    
+    @State private var imageURL: URL?
+    
     @State private var isPresentingScanner = false
     @State private var scannedCode: String = ""
-
-    @State private var imageURL: URL?
-    let storage = Storage.storage()
     
     var scannerSheet: some View {
         CodeScannerView(
@@ -59,6 +60,12 @@ struct ContentView: View {
         }
     }
     
+    /// Retrieves an image from Firebase Cloud Storage located at the specified path.
+    ///
+    /// - Parameters:
+    ///   - path: The path to the image in Firebase Cloud Storage.
+    ///
+    /// - Returns: This function does not return any value.
     func loadImage(from path: String) {
         let storageRef = storage.reference()
         let imageRef = storageRef.child(path)
