@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		772411A82B7AC9B300400B93 /* Zip in Frameworks */ = {isa = PBXBuildFile; productRef = 772411A72B7AC9B300400B93 /* Zip */; };
 		775970662B619E5D00C501F4 /* DatabaseDemoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 775970652B619E5D00C501F4 /* DatabaseDemoApp.swift */; };
 		775970682B619E5D00C501F4 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 775970672B619E5D00C501F4 /* ContentView.swift */; };
 		7759706A2B619E5E00C501F4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 775970692B619E5E00C501F4 /* Assets.xcassets */; };
@@ -66,7 +65,6 @@
 				775970952B619EF700C501F4 /* FirebaseAnalytics in Frameworks */,
 				77DB662A2B7A870B00F50F2D /* CodeScanner in Frameworks */,
 				77CED64E2B729B2C00C98EBE /* FirebaseStorage in Frameworks */,
-				772411A82B7AC9B300400B93 /* Zip in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -114,9 +112,9 @@
 				7759708F2B619EDA00C501F4 /* GoogleService-Info.plist */,
 				775970652B619E5D00C501F4 /* DatabaseDemoApp.swift */,
 				775970672B619E5D00C501F4 /* ContentView.swift */,
+				77CC97212B7B9D1500AFE3FB /* ModelViewer.swift */,
 				775970692B619E5E00C501F4 /* Assets.xcassets */,
 				7759706B2B619E5E00C501F4 /* Preview Content */,
-				77CC97212B7B9D1500AFE3FB /* ModelViewer.swift */,
 			);
 			path = DatabaseDemo;
 			sourceTree = "<group>";
@@ -174,7 +172,6 @@
 				775970962B619EF700C501F4 /* FirebaseAnalyticsSwift */,
 				77CED64D2B729B2C00C98EBE /* FirebaseStorage */,
 				77DB66292B7A870B00F50F2D /* CodeScanner */,
-				772411A72B7AC9B300400B93 /* Zip */,
 			);
 			productName = DatabaseDemo;
 			productReference = 775970622B619E5D00C501F4 /* DatabaseDemo.app */;
@@ -665,11 +662,6 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		772411A72B7AC9B300400B93 /* Zip */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 772411A62B7AC9B300400B93 /* XCRemoteSwiftPackageReference "Zip" */;
-			productName = Zip;
-		};
 		775970942B619EF700C501F4 /* FirebaseAnalytics */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 775970932B619EF700C501F4 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
