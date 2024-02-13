@@ -2,6 +2,7 @@ import SwiftUI
 import FirebaseStorage
 import CodeScanner
 
+
 struct ContentView: View {
     
     let storage = Storage.storage()
@@ -30,7 +31,10 @@ struct ContentView: View {
         VStack {
             if let usdzURL = usdzURL {
                 
-                Text("USDZ Model Loaded: \(usdzURL.absoluteString)")
+                ModelViewer(url: usdzURL)
+                    .edgesIgnoringSafeArea(.all)
+                
+//                Text("USDZ Model Loaded: \(usdzURL.absoluteString)")
                 
                 Button("Close", role: .destructive) {
                     self.usdzURL = nil
