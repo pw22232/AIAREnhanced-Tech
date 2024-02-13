@@ -40,6 +40,13 @@ struct ContentView: View {
                 }
             }
         }
+        .task {
+            do {
+                try await asyncDownloadQRCodes()
+            } catch {
+                print("Error: \(error)")
+            }
+        }
     }
 
     func asyncDownloadUSDZ(from path: String) {
@@ -84,6 +91,17 @@ struct ContentView: View {
             completion(fileURL)
         } catch {
             print("Error saving USDZ file to filesystem: \(error.localizedDescription)")
+        }
+    }
+    
+    func asyncDownloadQRCodes() async throws {
+        let storageRef = storage.reference()
+        let qrCodeFolderRef = storageRef.child("qr")
+        
+        let qrCodelist = try await qrCodeFolderRef.listAll()
+        
+        for item in qrCodelist.items {
+            print(item.name)
         }
     }
 }
