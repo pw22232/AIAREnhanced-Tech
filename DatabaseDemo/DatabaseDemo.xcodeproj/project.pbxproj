@@ -20,7 +20,6 @@
 		775970922B619EDA00C501F4 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7759708F2B619EDA00C501F4 /* GoogleService-Info.plist */; };
 		775970952B619EF700C501F4 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 775970942B619EF700C501F4 /* FirebaseAnalytics */; };
 		775970972B619EF700C501F4 /* FirebaseAnalyticsSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 775970962B619EF700C501F4 /* FirebaseAnalyticsSwift */; };
-		77CC97222B7B9D1500AFE3FB /* ModelViewer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77CC97212B7B9D1500AFE3FB /* ModelViewer.swift */; };
 		77CED64E2B729B2C00C98EBE /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 77CED64D2B729B2C00C98EBE /* FirebaseStorage */; };
 		77DB662A2B7A870B00F50F2D /* CodeScanner in Frameworks */ = {isa = PBXBuildFile; productRef = 77DB66292B7A870B00F50F2D /* CodeScanner */; };
 /* End PBXBuildFile section */
@@ -55,7 +54,6 @@
 		775970802B619E5E00C501F4 /* DatabaseDemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseDemoUITests.swift; sourceTree = "<group>"; };
 		775970822B619E5E00C501F4 /* DatabaseDemoUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseDemoUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		7759708F2B619EDA00C501F4 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
-		77CC97212B7B9D1500AFE3FB /* ModelViewer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelViewer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,7 +112,6 @@
 				7759708F2B619EDA00C501F4 /* GoogleService-Info.plist */,
 				775970652B619E5D00C501F4 /* DatabaseDemoApp.swift */,
 				775970672B619E5D00C501F4 /* ContentView.swift */,
-				77CC97212B7B9D1500AFE3FB /* ModelViewer.swift */,
 				774202652B7BA321003B6F62 /* ARViewContainer.swift */,
 				775970692B619E5E00C501F4 /* Assets.xcassets */,
 				7759706B2B619E5E00C501F4 /* Preview Content */,
@@ -298,7 +295,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				77CC97222B7B9D1500AFE3FB /* ModelViewer.swift in Sources */,
 				774202662B7BA321003B6F62 /* ARViewContainer.swift in Sources */,
 				775970682B619E5D00C501F4 /* ContentView.swift in Sources */,
 				775970662B619E5D00C501F4 /* DatabaseDemoApp.swift in Sources */,
