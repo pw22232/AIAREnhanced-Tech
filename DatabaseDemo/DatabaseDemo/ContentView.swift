@@ -46,7 +46,7 @@ struct ContentView: View {
         let storageRef = storage.reference()
         let usdzRef = storageRef.child("\(path).usdz")
 
-        usdzRef.getData(maxSize: 10 * 1024 * 1024) { data, error in
+        usdzRef.getData(maxSize: 30 * 1024 * 1024) { data, error in
             if let error = error {
                 print("Error downloading USDZ file: \(error.localizedDescription)")
                 return
