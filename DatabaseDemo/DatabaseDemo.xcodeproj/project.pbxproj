@@ -115,9 +115,9 @@
 				775970652B619E5D00C501F4 /* DatabaseDemoApp.swift */,
 				775970672B619E5D00C501F4 /* ContentView.swift */,
 				77CC97212B7B9D1500AFE3FB /* ModelViewer.swift */,
+				774202652B7BA321003B6F62 /* ARViewContainer.swift */,
 				775970692B619E5E00C501F4 /* Assets.xcassets */,
 				7759706B2B619E5E00C501F4 /* Preview Content */,
-				774202652B7BA321003B6F62 /* ARViewContainer.swift */,
 			);
 			path = DatabaseDemo;
 			sourceTree = "<group>";
