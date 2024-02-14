@@ -3,10 +3,13 @@ import FirebaseStorage
 import CodeScanner
 import RealityKit
 import CoreImage
+import ARKit
 
 struct ContentView: View {
 
     let storage = Storage.storage()
+
+    @State private var referenceImages = Set<ARReferenceImage>()
 
     @State private var scannedCode: String = ""
     @State private var isPresentingScanner = false
@@ -43,7 +46,7 @@ struct ContentView: View {
         }
         .task {
             do {
-                try await asyncDownloadQRCodes()
+                referenceImages = try await asyncDownloadQRCodes()
             } catch {
                 print("Error: \(error)")
             }
@@ -95,7 +98,7 @@ struct ContentView: View {
         }
     }
     
-    func asyncDownloadQRCodes() async throws {
+    func asyncDownloadQRCodes() async throws -> Set<ARReferenceImage> {
         let storageRef = storage.reference()
         let qrCodeFolderRef = storageRef.child("qr")
         
@@ -129,8 +132,16 @@ struct ContentView: View {
             if let qrCodeData = readQrCodeFromImage(from: image) {
                 print("QR Code Data: \(qrCodeData)")
             }
+            
+            var referenceImages = Set<ARReferenceImage>()
+            
+            let referenceImage = ARReferenceImage(cgImage, orientation: .up, physicalWidth: 0.1)
+            referenceImage.name = qrCodeRef.name
+            referenceImages.insert(referenceImage)
         
         }
+        
+        return referenceImages
         
     }
     
