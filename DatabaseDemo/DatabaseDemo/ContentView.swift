@@ -22,7 +22,7 @@ struct ContentView: View {
                 case .success(let code):
                     self.scannedCode = code.string // extract string from scanned qr code
                     self.isPresentingScanner = false
-                    print(scannedCode)
+                    print("Scanned Code: \(scannedCode)")
                     self.asyncDownloadUSDZ(from: scannedCode)
                 case .failure(let error):
                     print("\(error)")
