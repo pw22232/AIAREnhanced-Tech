@@ -106,17 +106,6 @@ struct ContentView: View {
         
         for qrCodeRef in qrCodelist.items {
             
-            // Assuming the name of the qr code is the path to the model and is formatted correctly,
-            // we can extract and format the name to get the path to the model
-            // Pros: less processing required
-            // Cons: dependent on strict naming convention, which could get confusing
-            //       If 2 QR codes have the same name, or there are 2 copies of a QR code with different names, it could cause issues
-            let formattedName = qrCodeRef.name
-                .replacingOccurrences(of: ".png", with: "")
-                .replacingOccurrences(of: ":", with: "/")
-            
-            print("QR Code Name: \(formattedName)")
-            
             let url = try await qrCodeRef.downloadURL()
             let data = try Data(contentsOf: url)
             
