@@ -11,37 +11,15 @@ struct ContentView: View {
 
     @State private var referenceImages = Set<ARReferenceImage>()
 
-    @State private var scannedCode: String = ""
-    @State private var isPresentingScanner = false
-    @State private var usdzURL: URL?
-
-    var scannerSheet: some View {
-        CodeScannerView(
-            codeTypes: [.qr], completion: { result in
-                switch result {
-                case .success(let code):
-                    self.scannedCode = code.string // extract string from scanned qr code
-                    self.isPresentingScanner = false
-                    print("Scanned Code: \(scannedCode)")
-                    self.asyncDownloadUSDZ(from: scannedCode)
-                case .failure(let error):
-                    print("\(error)")
-                }
-            }
-        )
-    }
+    @State private var isPresentingARView = false
 
     var body: some View {
         VStack {
-            if let usdzURL = usdzURL {
-                ARViewContainer(usdzURL: usdzURL)
-            } else {
-                Button("Scan QR code") {
-                    self.isPresentingScanner = true
-                }
-                .sheet(isPresented: $isPresentingScanner) {
-                    self.scannerSheet
-                }
+            Button("Open AR View") {
+                self.isPresentingARView = true
+            }
+            .sheet(isPresented: $isPresentingARView) {
+                ARViewContainer()
             }
         }
         .task {
@@ -71,7 +49,6 @@ struct ContentView: View {
             // Save the downloaded USDZ file to the local filesystem
             self.asyncDownloadToFileSystem(data: data) { fileURL in
                 DispatchQueue.main.async {
-                    self.usdzURL = fileURL
                     print("Local USDZ File Path: \(fileURL.path)")
 
                     // Load the saved USDZ file into a RealityKit entity
