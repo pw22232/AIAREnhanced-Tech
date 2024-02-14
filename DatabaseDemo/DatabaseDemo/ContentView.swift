@@ -18,13 +18,17 @@ struct ContentView: View {
             Button("Open AR View") {
                 self.isPresentingARView = true
             }
+            .disabled(referenceImages.isEmpty)
             .sheet(isPresented: $isPresentingARView) {
-                ARViewContainer()
+                ARViewContainer(referenceImages: referenceImages)
             }
         }
         .task {
             do {
-                referenceImages = try await asyncDownloadQRCodes()
+                let images = try await asyncDownloadQRCodes()
+                DispatchQueue.main.async {
+                    referenceImages = images
+                }
             } catch {
                 print("Error: \(error)")
             }
@@ -81,6 +85,8 @@ struct ContentView: View {
         
         let qrCodelist = try await qrCodeFolderRef.listAll()
         
+        var referenceImages = Set<ARReferenceImage>()
+        
         for qrCodeRef in qrCodelist.items {
             
             let url = try await qrCodeRef.downloadURL()
@@ -100,9 +106,7 @@ struct ContentView: View {
             }
             
             print("QR Code Data: \(qrCodeData)")
-            
-            var referenceImages = Set<ARReferenceImage>()
-            
+                        
             let referenceImage = ARReferenceImage(cgImage, orientation: .up, physicalWidth: 0.1)
             referenceImage.name = qrCodeData
             referenceImages.insert(referenceImage)
