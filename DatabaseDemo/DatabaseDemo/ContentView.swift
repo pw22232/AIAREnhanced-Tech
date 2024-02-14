@@ -129,14 +129,16 @@ struct ContentView: View {
             // we can extract the data from the qr code and get the path to the model
             // Pros: potentially more secure and more robust since naming convention does not matter; more flexible
             // Cons: more processing required; could fail if reading qr code is unsuccessful
-            if let qrCodeData = readQrCodeFromImage(from: image) {
-                print("QR Code Data: \(qrCodeData)")
+            guard let qrCodeData = readQrCodeFromImage(from: image) else {
+                throw NSError(domain: "Error extracting data from QR code", code: 2, userInfo: nil)
             }
+            
+            print("QR Code Data: \(qrCodeData)")
             
             var referenceImages = Set<ARReferenceImage>()
             
             let referenceImage = ARReferenceImage(cgImage, orientation: .up, physicalWidth: 0.1)
-            referenceImage.name = qrCodeRef.name
+            referenceImage.name = qrCodeData
             referenceImages.insert(referenceImage)
         
         }
