@@ -2,6 +2,7 @@ import SwiftUI
 import FirebaseStorage
 import CodeScanner
 import RealityKit
+import CoreImage
 
 struct ContentView: View {
 
@@ -100,9 +101,52 @@ struct ContentView: View {
         
         let qrCodelist = try await qrCodeFolderRef.listAll()
         
-        for item in qrCodelist.items {
-            print(item.name)
+        for qrCodeRef in qrCodelist.items {
+            
+            // Assuming the name of the qr code is the path to the model and is formatted correctly,
+            // we can extract and format the name to get the path to the model
+            // Pros: less processing required
+            // Cons: dependent on strict naming convention, which could get confusing
+            //       If 2 QR codes have the same name, or there are 2 copies of a QR code with different names, it could cause issues
+            let formattedName = qrCodeRef.name
+                .replacingOccurrences(of: ".png", with: "")
+                .replacingOccurrences(of: ":", with: "/")
+            
+            print("QR Code Name: \(formattedName)")
+            
+            let url = try await qrCodeRef.downloadURL()
+            let data = try Data(contentsOf: url)
+            
+            // cgImage will be used when adding AR Reference Images
+            guard let image = UIImage(data: data), let cgImage = image.cgImage else {
+                throw NSError(domain: "Error converting downloaded data into image", code: 1, userInfo: nil)
+            }
+            
+            // Assuming encoded data of the qr is the path to the model,
+            // we can extract the data from the qr code and get the path to the model
+            // Pros: potentially more secure and more robust since naming convention does not matter; more flexible
+            // Cons: more processing required; could fail if reading qr code is unsuccessful
+            if let qrCodeData = readQrCodeFromImage(from: image) {
+                print("QR Code Data: \(qrCodeData)")
+            }
+        
         }
+        
+    }
+    
+    func readQrCodeFromImage(from image: UIImage) -> String? {
+        let context = CIContext()
+        let options = [CIDetectorAccuracy: CIDetectorAccuracyHigh]
+        let qrDetecter = CIDetector(ofType: CIDetectorTypeQRCode, context: context, options: options)
+        
+        if 
+            let ciImage = CIImage(image: image),
+            let features = qrDetecter?.features(in: ciImage) as? [CIQRCodeFeature]
+        {
+            return features.first?.messageString
+        }
+        
+        return nil
     }
 }
 
