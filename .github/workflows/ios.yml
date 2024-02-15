@@ -15,7 +15,9 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
       - name: Change to project directory
-        run: cd ./AIAR
+        run: |
+          cd ./AIAR
+          ls -al
       - name: Set Default Scheme
         run: |
           scheme_list=$(xcodebuild -list -json | tr -d "\n")
