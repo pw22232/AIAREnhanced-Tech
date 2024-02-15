@@ -10,18 +10,15 @@ jobs:
   build:
     name: Build and Test default scheme using any available iPhone simulator
     runs-on: macos-latest
+    defaults:
+      run:
+        working-directory: ./AIAR
 
     steps:
       - name: Checkout
         uses: actions/checkout@v3
-      - name: Change to project directory
-        run: |
-          cd ./AIAR
-          pwd
-          ls -al
       - name: Set Default Scheme
         run: |
-          cd ./AIAR
           scheme_list=$(xcodebuild -list -json | tr -d "\n")
           default=$(echo $scheme_list | ruby -e "require 'json'; puts JSON.parse(STDIN.gets)['project']['schemes'][0]")
           echo $default | cat >default
@@ -31,7 +28,6 @@ jobs:
           scheme: ${{ 'default' }}
           platform: ${{ 'iOS Simulator' }}
         run: |
-          cd ./AIAR
           # xcrun xctrace returns via stderr, not the expected stdout (see https://developer.apple.com/forums/thread/663959)
           device=`xcrun xctrace list devices 2>&1 | grep -oE 'iPhone.*?[^\(]+' | head -1 | awk '{$1=$1;print}' | sed -e "s/ Simulator$//"`
           if [ $scheme = default ]; then scheme=$(cat default); fi
