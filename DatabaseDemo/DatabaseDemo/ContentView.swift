@@ -34,50 +34,6 @@ struct ContentView: View {
             }
         }
     }
-
-    func asyncDownloadUSDZ(from path: String) {
-        let storageRef = storage.reference()
-        let usdzRef = storageRef.child("\(path).usdz")
-
-        usdzRef.getData(maxSize: 30 * 1024 * 1024) { data, error in
-            if let error = error {
-                print("Error downloading USDZ file: \(error.localizedDescription)")
-                return
-            }
-
-            guard let data = data else {
-                print("Error: Empty data received for USDZ file")
-                return
-            }
-
-            // Save the downloaded USDZ file to the local filesystem
-            self.asyncDownloadToFileSystem(data: data) { fileURL in
-                DispatchQueue.main.async {
-                    print("Local USDZ File Path: \(fileURL.path)")
-
-                    // Load the saved USDZ file into a RealityKit entity
-                    do {
-                        _ = try Entity.loadModel(contentsOf: fileURL)
-                    } catch {
-                        print("Error loading USDZ data into RealityKit: \(error.localizedDescription)")
-                    }
-                }
-            }
-        }
-    }
-
-    func asyncDownloadToFileSystem(data: Data, completion: @escaping (URL) -> Void) {
-        let fileManager = FileManager.default
-        let docsURL = fileManager.urls(for: .cachesDirectory, in: .userDomainMask).first!
-        let fileURL = docsURL.appendingPathComponent("downloadedUSDZ.usdz")
-
-        do {
-            try data.write(to: fileURL)
-            completion(fileURL)
-        } catch {
-            print("Error saving USDZ file to filesystem: \(error.localizedDescription)")
-        }
-    }
     
     func asyncDownloadQRCodes() async throws -> Set<ARReferenceImage> {
         let storageRef = storage.reference()
