@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7735BF912B7E618C00211BC2 /* QRCodeLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7735BF902B7E618C00211BC2 /* QRCodeLoader.swift */; };
+		7735BF932B7E62EF00211BC2 /* QRCodeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7735BF922B7E62EF00211BC2 /* QRCodeService.swift */; };
 		774202662B7BA321003B6F62 /* ARViewContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 774202652B7BA321003B6F62 /* ARViewContainer.swift */; };
 		7745683E2B7D9CA200B49847 /* USDZLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7745683D2B7D9CA200B49847 /* USDZLoader.swift */; };
 		775970662B619E5D00C501F4 /* DatabaseDemoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 775970652B619E5D00C501F4 /* DatabaseDemoApp.swift */; };
@@ -43,6 +45,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7735BF902B7E618C00211BC2 /* QRCodeLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodeLoader.swift; sourceTree = "<group>"; };
+		7735BF922B7E62EF00211BC2 /* QRCodeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodeService.swift; sourceTree = "<group>"; };
 		774202652B7BA321003B6F62 /* ARViewContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARViewContainer.swift; sourceTree = "<group>"; };
 		7745683D2B7D9CA200B49847 /* USDZLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = USDZLoader.swift; sourceTree = "<group>"; };
 		775970622B619E5D00C501F4 /* DatabaseDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DatabaseDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -118,6 +122,8 @@
 				774202652B7BA321003B6F62 /* ARViewContainer.swift */,
 				775970692B619E5E00C501F4 /* Assets.xcassets */,
 				7759706B2B619E5E00C501F4 /* Preview Content */,
+				7735BF902B7E618C00211BC2 /* QRCodeLoader.swift */,
+				7735BF922B7E62EF00211BC2 /* QRCodeService.swift */,
 			);
 			path = DatabaseDemo;
 			sourceTree = "<group>";
@@ -298,10 +304,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7735BF912B7E618C00211BC2 /* QRCodeLoader.swift in Sources */,
 				7745683E2B7D9CA200B49847 /* USDZLoader.swift in Sources */,
 				774202662B7BA321003B6F62 /* ARViewContainer.swift in Sources */,
 				775970682B619E5D00C501F4 /* ContentView.swift in Sources */,
 				775970662B619E5D00C501F4 /* DatabaseDemoApp.swift in Sources */,
+				7735BF932B7E62EF00211BC2 /* QRCodeService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
