@@ -17,6 +17,7 @@ jobs:
       - name: Change to project directory
         run: |
           cd ./AIAR
+          pwd
           ls -al
       - name: Set Default Scheme
         run: |
