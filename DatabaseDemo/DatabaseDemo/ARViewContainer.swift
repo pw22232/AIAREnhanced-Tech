@@ -62,19 +62,6 @@ struct ARViewContainer: UIViewRepresentable {
         arView.session.delegate = context.coordinator
         arView.session.run(configuration)
         
-
-//        do {
-//            let usdzEntity = try Entity.loadModel(contentsOf: usdzURL)
-//            let anchorEntity = AnchorEntity(world: [0, 0, 0]) // Place the anchor at the origin
-//            anchorEntity.addChild(usdzEntity)
-//            arView.scene.addAnchor(anchorEntity)
-//        } catch {
-//            print("Error loading USDZ data into RealityKit: \(error.localizedDescription)")
-//        }
-        
-        
-        
-        
         return arView
     }
 

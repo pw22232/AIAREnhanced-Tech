@@ -63,7 +63,7 @@ struct ContentView: View {
             
             print("QR Code Data: \(qrCodeData)")
                         
-            let referenceImage = ARReferenceImage(cgImage, orientation: .up, physicalWidth: 0.1)
+            let referenceImage = ARReferenceImage(cgImage, orientation: .up, physicalWidth: 0.1) // the size is important and subject to change
             referenceImage.name = qrCodeData
             referenceImages.insert(referenceImage)
         
