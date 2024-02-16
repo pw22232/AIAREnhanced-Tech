@@ -26,7 +26,7 @@ jobs:
           echo Using default scheme: $default
 
       - name: List Simulator Devices
-        run: xcrun simctl list devices
+        run: xcrun xctrace list devices
         
       - name: Build
         env:
