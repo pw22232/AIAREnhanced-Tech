@@ -8,14 +8,23 @@
 import Foundation
 import FirebaseStorage
 
+// USDZLoader is a struct that handles downloading USDZ files from Firebase Storage.
 struct USDZLoader {
     
+    // Create an instance of Firebase Storage
     let storage = Storage.storage()
     
+    /// Downloads a usdz file from Firebase Storage
+    /// - Parameters:
+    ///   - path: The path to the file in Firebase Storage
+    ///   - completion: A closure that is called when the file has been downloaded
     func asyncDownloadUSDZ(from path: String, completion: @escaping (URL) -> Void) {
+        
+        // Create a reference to Firebase Storage and the usdz file
         let storageRef = storage.reference()
         let usdzRef = storageRef.child("\(path).usdz")
         
+        // Download the data of the usdz file
         usdzRef.getData(maxSize: 30 * 1024 * 1024) { data, error in
             if let error = error {
                 print("Error downloading USDZ file: \(error.localizedDescription)")
@@ -27,17 +36,25 @@ struct USDZLoader {
                 return
             }
             
+            // If the data was successfully downloaded, save it to the local file system
             self.asyncDownloadToFileSystem(data: data, completion: completion)
             
         }
         
     }
     
+    /// Saves data to the local file system
+    /// - Parameters:
+    ///   - data: The data to be saved
+    ///   - completion: A closure that is called when the file has been saved
     func asyncDownloadToFileSystem(data: Data, completion: @escaping (URL) -> Void) {
+        
+        // Get the URL for the caches directory
         let fileManager = FileManager.default
         let docsURL = fileManager.urls(for: .cachesDirectory, in: .userDomainMask).first!
         let fileURL = docsURL.appendingPathComponent("downloadedUSDZ.usdz") // maybe use `appending` in future (a...PathCom... will be deprecated)
         
+        // Try to write to the file system
         do {
             try data.write(to: fileURL)
             completion(fileURL)
