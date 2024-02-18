@@ -68,6 +68,8 @@ By tailoring your product to meet the needs of these three personas, we can ensu
 ### Technologies
 
 - **Swift**  -  As a team, we have chosen to utilize the Swift programming language to develop our application. Swift is a modern, open-source programming language developed by Apple. Swift offers performance improvements over Objective-C and features a clean and concise syntax making it a popular choice for building iOS applications.
+
+- **Blender**  -  Blender is a versatile 3D modeling software. We are using it to create our visual content like our augmented diagrams. Blender offers us a comprehensive set of tools and features to be able to sculpt and texture our diagrams.
   
 - **IBM's AI Watson Speech to Text, Text to Speech**  -  IBM's Watson is an artificial intelligence system developed by IBM. Watson is powered by advanced machine learning and natural language processing algorithms. Watson Speech to Text and Text to Speech are services within IBM's Watson AI platform. We will look to harness Watson’s Text to Speech service to transform written text into lifelike speech, facilitating the application's interactive voice response systems.
 
