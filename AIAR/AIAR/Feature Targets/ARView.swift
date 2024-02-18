@@ -51,6 +51,8 @@ class AARView: ARView {
                    case . showButton:
                       self?.buttonAction()
                     
+                    
+            
                 }
             }
             .store(in: &cancellables)
@@ -101,6 +103,8 @@ class AARView: ARView {
             print("Button tapped")
         }
     
+    
+
     
 }
 

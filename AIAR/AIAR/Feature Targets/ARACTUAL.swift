@@ -67,9 +67,18 @@ struct ARACTUAL: View {
                                     .background(.regularMaterial)
                                     .cornerRadius(16)
                             }
-                            
-                            
                         }
+                        
+                        NavigationLink(destination: ModelViewRepresentable()) {
+                            Text("Model Intro")
+                                .padding()
+                                .background(Color.white)
+                                .foregroundColor(Color.black)
+                                .cornerRadius(8)
+                        }
+                        
+                        
+                        
                         
                     }
                     .padding()
