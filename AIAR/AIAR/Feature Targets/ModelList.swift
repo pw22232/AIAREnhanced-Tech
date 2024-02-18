@@ -16,11 +16,11 @@ struct Models {
 struct ModelViewRepresentable: View {
     
     @State private var models = [
-        Models(name:"Model1",category: "IBM Internal",description: "this is model 1"),
-        Models(name:"Model2",category: "IBM Internal",description: "this is model 2"),
-        Models(name:"Model3",category: "external",description: "this is model 3"),
-        Models(name:"Model4",category: "external",description: "this is model 4"),
-        Models(name:"Model5",category: "external",description: "this is model 5")
+        Models(name:"Model1",category: "IBM Internal",description: "this is model 1, it is an IBM Internal document"),
+        Models(name:"Model2",category: "IBM Internal",description: "this is model 2, it is an IBM Internal document"),
+        Models(name:"Model3",category: "external",description: "this is model 3, it is an external document"),
+        Models(name:"Model4",category: "external",description: "this is model 4, it is an external document"),
+        Models(name:"Model5",category: "external",description: "this is model 5, it is an external document")
     ]
     @State private var showModelView = false
     
