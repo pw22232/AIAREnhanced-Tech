@@ -36,6 +36,7 @@ struct ModelViewRepresentable: View {
                     NavigationLink(destination:
                         VStack{
                              Text(models.name)
+                             Text(models.category)
                              Text(models.description)
                              Image(models.category)
                                  .resizable()
