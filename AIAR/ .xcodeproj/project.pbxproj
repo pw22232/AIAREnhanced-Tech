@@ -8,9 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		041016F82B73B29C0099E63D /* ARView_QR.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041016F72B73B29C0099E63D /* ARView_QR.swift */; };
-		A7A14A0C2AE86919009BC8A4 /* AIARTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7A14A0B2AE86919009BC8A4 /* AIARTests.swift */; };
-		A7A14A162AE86919009BC8A4 /* AIARUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7A14A152AE86919009BC8A4 /* AIARUITests.swift */; };
-		A7A14A182AE86919009BC8A4 /* AIARUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7A14A172AE86919009BC8A4 /* AIARUITestsLaunchTests.swift */; };
 		A76876EB2B6ADB8F00F95E44 /* AIARApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A76876EA2B6ADB8F00F95E44 /* AIARApp.swift */; };
 		A76876ED2B6ADB8F00F95E44 /* ARACTUAL.swift in Sources */ = {isa = PBXBuildFile; fileRef = A76876EC2B6ADB8F00F95E44 /* ARACTUAL.swift */; };
 		A76876EF2B6ADB9000F95E44 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A76876EE2B6ADB9000F95E44 /* Assets.xcassets */; };
@@ -23,6 +20,7 @@
 		A76877202B6AE0FF00F95E44 /* team.swift in Sources */ = {isa = PBXBuildFile; fileRef = A768771F2B6AE0FF00F95E44 /* team.swift */; };
 		A76877222B6AEB4200F95E44 /* boxTest6.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = A76877212B6AEB4200F95E44 /* boxTest6.rcproject */; };
 		A768775C2B72439D00F95E44 /* word2test.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = A768775B2B72439D00F95E44 /* word2test.rcproject */; };
+		A795F5462B7E3A8100B26EF7 /* info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A795F5452B7E3A8100B26EF7 /* info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,12 +42,6 @@
 
 /* Begin PBXFileReference section */
 		041016F72B73B29C0099E63D /* ARView_QR.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARView_QR.swift; sourceTree = "<group>"; };
-		A7A14A072AE86919009BC8A4 /* AIARTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AIARTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		A7A14A0B2AE86919009BC8A4 /* AIARTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AIARTests.swift; sourceTree = "<group>"; };
-		A7A14A112AE86919009BC8A4 /* AIARUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AIARUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		A7A14A152AE86919009BC8A4 /* AIARUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AIARUITests.swift; sourceTree = "<group>"; };
-		A7A14A172AE86919009BC8A4 /* AIARUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AIARUITestsLaunchTests.swift; sourceTree = "<group>"; };
-
 		A76876E72B6ADB8F00F95E44 /* AIAR.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AIAR.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A76876EA2B6ADB8F00F95E44 /* AIARApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AIARApp.swift; sourceTree = "<group>"; };
 		A76876EC2B6ADB8F00F95E44 /* ARACTUAL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARACTUAL.swift; sourceTree = "<group>"; };
@@ -63,6 +55,7 @@
 		A768771F2B6AE0FF00F95E44 /* team.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = team.swift; sourceTree = "<group>"; };
 		A76877212B6AEB4200F95E44 /* boxTest6.rcproject */ = {isa = PBXFileReference; lastKnownFileType = file.rcproject; path = boxTest6.rcproject; sourceTree = "<group>"; };
 		A768775B2B72439D00F95E44 /* word2test.rcproject */ = {isa = PBXFileReference; lastKnownFileType = file.rcproject; path = word2test.rcproject; sourceTree = "<group>"; };
+		A795F5452B7E3A8100B26EF7 /* info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,8 +97,6 @@
 			isa = PBXGroup;
 			children = (
 				A76876E72B6ADB8F00F95E44 /* AIAR.app */,
-				A76876F72B6ADB9000F95E44 /* AIARTests.xctest */,
-				A76877012B6ADB9000F95E44 /* AIARUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -119,6 +110,7 @@
 				A768775B2B72439D00F95E44 /* word2test.rcproject */,
 				A76877212B6AEB4200F95E44 /* boxTest6.rcproject */,
 				A76876F02B6ADB9000F95E44 /* Preview Content */,
+				A795F5452B7E3A8100B26EF7 /* info.plist */,
 			);
 			path = AIAR;
 			sourceTree = "<group>";
@@ -134,7 +126,6 @@
 		A76876FA2B6ADB9000F95E44 /* AIARTests */ = {
 			isa = PBXGroup;
 			children = (
-				A76876FB2B6ADB9000F95E44 /* AIARTests.swift */,
 			);
 			path = AIARTests;
 			sourceTree = "<group>";
@@ -142,8 +133,6 @@
 		A76877042B6ADB9000F95E44 /* AIARUITests */ = {
 			isa = PBXGroup;
 			children = (
-				A76877052B6ADB9000F95E44 /* AIARUITests.swift */,
-				A76877072B6ADB9000F95E44 /* AIARUITestsLaunchTests.swift */,
 			);
 			path = AIARUITests;
 			sourceTree = "<group>";
@@ -152,7 +141,6 @@
 			isa = PBXGroup;
 			children = (
 				041016F72B73B29C0099E63D /* ARView_QR.swift */,
-        
 				A76876EC2B6ADB8F00F95E44 /* ARACTUAL.swift */,
 				A76877152B6ADC1700F95E44 /* ARAction.swift */,
 				A76877172B6ADC2900F95E44 /* ARManager.swift */,
@@ -199,7 +187,6 @@
 			);
 			name = AIARTests;
 			productName = AIARTests;
-			productReference = A76876F72B6ADB9000F95E44 /* AIARTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 		A76877002B6ADB9000F95E44 /* AIARUITests */ = {
@@ -217,7 +204,6 @@
 			);
 			name = AIARUITests;
 			productName = AIARUITests;
-			productReference = A76877012B6ADB9000F95E44 /* AIARUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -243,7 +229,7 @@
 					};
 				};
 			};
-			buildConfigurationList = A76876E22B6ADB8F00F95E44 /* Build configuration list for PBXProject "AIAR" */;
+			buildConfigurationList = A76876E22B6ADB8F00F95E44 /* Build configuration list for PBXProject " " */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -270,6 +256,7 @@
 			files = (
 				A76876F22B6ADB9000F95E44 /* Preview Assets.xcassets in Resources */,
 				A76876EF2B6ADB9000F95E44 /* Assets.xcassets in Resources */,
+				A795F5462B7E3A8100B26EF7 /* info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -295,7 +282,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				041016F82B73B29C0099E63D /* ARView_QR.swift in Sources */,
-
 				A768771A2B6ADC3F00F95E44 /* ARView.swift in Sources */,
 				A76877182B6ADC2A00F95E44 /* ARManager.swift in Sources */,
 				A768771C2B6ADC5E00F95E44 /* ARViewRepresentable.swift in Sources */,
@@ -313,7 +299,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A76876FC2B6ADB9000F95E44 /* AIARTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -321,8 +306,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A76877062B6ADB9000F95E44 /* AIARUITests.swift in Sources */,
-				A76877082B6ADB9000F95E44 /* AIARUITestsLaunchTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -471,13 +454,13 @@
 				DEVELOPMENT_ASSET_PATHS = "\"AIAR/Preview Content\"";
 				DEVELOPMENT_TEAM = MWMP5VYB7V;
 				ENABLE_PREVIEWS = YES;
+				EXCLUDED_ARCHS = arm64;
+				"EXCLUDED_ARCHS[sdk=*]" = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = AIAR/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "";
-				INFOPLIST_KEY_LSApplicationCategoryType = "";
 				INFOPLIST_KEY_NSCameraUsageDescription = "Needed to show AR View";
 				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "Allows to save QR Code";
-
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -506,13 +489,13 @@
 				DEVELOPMENT_ASSET_PATHS = "\"AIAR/Preview Content\"";
 				DEVELOPMENT_TEAM = MWMP5VYB7V;
 				ENABLE_PREVIEWS = YES;
+				EXCLUDED_ARCHS = arm64;
+				"EXCLUDED_ARCHS[sdk=*]" = arm64;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = AIAR/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "";
-				INFOPLIST_KEY_LSApplicationCategoryType = "";
 				INFOPLIST_KEY_NSCameraUsageDescription = "Needed to show AR View";
 				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "Allows to save QR Code";
-
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -609,7 +592,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		A76876E22B6ADB8F00F95E44 /* Build configuration list for PBXProject "AIAR" */ = {
+		A76876E22B6ADB8F00F95E44 /* Build configuration list for PBXProject " " */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				A76877092B6ADB9000F95E44 /* Debug */,

@@ -12,4 +12,5 @@ enum ARAction {
     case removeAllAnchors
     case importRc
     case importDocu
+    case showButton
 }

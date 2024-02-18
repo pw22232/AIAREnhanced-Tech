@@ -33,7 +33,8 @@ struct TeamRepresentable: View {
                     Spacer()
                    }
                 
-                VStack{Spacer()
+                VStack{
+                    Spacer()
                     Image("Rxc")
                         .resizable()
                         .aspectRatio(contentMode: .fit)

@@ -12,6 +12,7 @@ import RealityKit
 
 
 class AARView: ARView {
+    @IBOutlet var arView: ARView!
     required init(frame frameRect: CGRect) {
         super.init(frame: frameRect)
     }
@@ -39,13 +40,16 @@ class AARView: ARView {
                         
                     case .removeAllAnchors:
                         self?.scene.anchors.removeAll()
-                    
-                case .importRc:
-                    self?.importRc()
+                 
+                    case .importRc:
+                         self?.importRc()
                     
                 
-                case .importDocu:
-                    self?.importDocu()
+                    case .importDocu:
+                        self?.importDocu()
+                    
+                   case . showButton:
+                      self?.buttonAction()
                     
                 }
             }
@@ -80,5 +84,23 @@ class AARView: ARView {
         let Boxanchor = try! Word2test.load场景()
         scene.anchors.append(Boxanchor)
     }
+    
+    
+    func showButton() {
+            let button = UIButton(frame: CGRect(x: 100, y: 100, width: 200, height: 50))
+            button.backgroundColor = .blue
+            button.setTitle("Tap Me", for: .normal)
+            button.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
+        self.arView.addSubview(button)
+            button.isHidden = false // Make the button visible
+
+        }
+    
+    @objc func buttonAction() {
+            // Define action for the button
+            print("Button tapped")
+        }
+    
+    
 }
 
