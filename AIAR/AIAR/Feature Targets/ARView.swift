@@ -11,10 +11,11 @@ import SwiftUI
 import RealityKit
 
 
-class AARView: ARView {
+class AARView: ARView, ARSessionDelegate {
     @IBOutlet var arView: ARView!
     required init(frame frameRect: CGRect) {
         super.init(frame: frameRect)
+        setupARSession()
     }
     
     dynamic required init?(coder decoder: NSCoder) {
@@ -35,47 +36,53 @@ class AARView: ARView {
             .actionStream
             .sink { [weak self] action in
                 switch action {
-                    case .placeBlock(let color):
-                        self?.placeBlock(ofColor: color)
-                        
-                    case .removeAllAnchors:
-                        self?.scene.anchors.removeAll()
-                 
-                    case .importRc:
-                         self?.importRc()
+                case .placeBlock(let color):
+                    self?.placeBlock(ofColor: color)
                     
-                
-                    case .importDocu:
-                        self?.importDocu()
+                case .removeAllAnchors:
+                    self?.scene.anchors.removeAll()
                     
-                   case . showButton:
-                      self?.buttonAction()
+                case .importRc:
+                    self?.importRc()
                     
                     
-            
+                case .importDocu:
+                    self?.importDocu()
+                    
+                    
+                    
+                    
+                    
                 }
             }
             .store(in: &cancellables)
     }
     
- 
-  
+    
     
     func placeBlock(ofColor color: Color) {
-        let block = MeshResource.generateBox(size: 1)
-        let material = SimpleMaterial(color: UIColor(color), isMetallic: false)
-        let entity = ModelEntity(mesh: block, materials: [material])
-        
-        let anchor = AnchorEntity(plane: .horizontal)
-        anchor.addChild(entity)
-        
-        scene.addAnchor(anchor)
-    }
-    
-
+              let block = MeshResource.generateBox(size: 1)
+              let material = SimpleMaterial(color: UIColor(color), isMetallic: false)
+              let entity = ModelEntity(mesh: block, materials: [material])
+              
+              let anchor = AnchorEntity(plane: .horizontal)
+              anchor.addChild(entity)
+              
+              scene.addAnchor(anchor)
+          }
+      
+      func placeBlock(at transform: simd_float4x4) {
+              let block = MeshResource.generateBox(size: 0.1)
+              let material = SimpleMaterial(color: .white, isMetallic: true)
+              let entity = ModelEntity(mesh: block, materials: [material])
+              
+              let anchor = AnchorEntity(world: transform)
+              anchor.addChild(entity)
+              scene.addAnchor(anchor)
+          }
     // ARSessionDelegate method
-   
-
+    
+    
     func importRc(){
         let Boxanchor = try! BoxTest6.load场景()
         scene.anchors.append(Boxanchor)
@@ -87,24 +94,32 @@ class AARView: ARView {
         scene.anchors.append(Boxanchor)
     }
     
-    
-    func showButton() {
-            let button = UIButton(frame: CGRect(x: 100, y: 100, width: 200, height: 50))
-            button.backgroundColor = .blue
-            button.setTitle("Tap Me", for: .normal)
-            button.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
-        self.arView.addSubview(button)
-            button.isHidden = false // Make the button visible
-
+    func setupARSession() {
+        self.session.delegate = self
+        let configuration = ARWorldTrackingConfiguration()
+        
+        // Load the QR code image from the asset catalog
+        if let qrImage = UIImage(named: "qrcode"),
+           let qrCGImage = qrImage.cgImage {
+            let referenceImage = ARReferenceImage(qrCGImage, orientation: .up, physicalWidth: 0.05) // Adjust the physicalWidth as needed
+            referenceImage.name = "qrcode"
+            configuration.detectionImages = [referenceImage]
         }
+        
+        session.run(configuration)
+    }
     
-    @objc func buttonAction() {
-            // Define action for the button
-            print("Button tapped")
+    // ARSessionDelegate method
+    func session(_ session: ARSession, didAdd anchors: [ARAnchor]) {
+        for anchor in anchors {
+            if let imageAnchor = anchor as? ARImageAnchor, imageAnchor.referenceImage.name == "qrcode" {
+                placeBlock(at: imageAnchor.transform)
+                print("QR code scanned -----$(*£&*@($&*&@%(*&@")
+            }
         }
-    
-    
-
+        
+        
+        
+    }
     
 }
-

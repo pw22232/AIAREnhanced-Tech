@@ -80,6 +80,7 @@ struct ARACTUAL: View {
                         
                         
                         
+                        
                     }
                     .padding()
                 }
