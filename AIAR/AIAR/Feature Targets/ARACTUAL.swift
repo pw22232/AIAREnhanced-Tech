@@ -19,7 +19,7 @@ struct ARACTUAL: View {
     ]
     
     var body: some View {
-        ARViewRepresentable()
+         ARViewRepresentable()
             .ignoresSafeArea()
             .overlay(alignment: .bottom) {
                 ScrollView(.horizontal) {

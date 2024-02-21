@@ -11,11 +11,10 @@ import SwiftUI
 import RealityKit
 
 
-class AARView: ARView, ARSessionDelegate {
+class AARView: ARView {
     @IBOutlet var arView: ARView!
     required init(frame frameRect: CGRect) {
         super.init(frame: frameRect)
-        setupARSession()
     }
     
     dynamic required init?(coder decoder: NSCoder) {
@@ -48,14 +47,9 @@ class AARView: ARView, ARSessionDelegate {
                     
                 case .importDocu:
                     self?.importDocu()
-                    
-                    
-                    
-                    
-                    
                 }
             }
-            .store(in: &cancellables)
+          .store(in: &cancellables)
     }
     
     
@@ -80,8 +74,6 @@ class AARView: ARView, ARSessionDelegate {
               anchor.addChild(entity)
               scene.addAnchor(anchor)
           }
-    // ARSessionDelegate method
-    
     
     func importRc(){
         let Boxanchor = try! BoxTest6.load场景()
@@ -89,37 +81,12 @@ class AARView: ARView, ARSessionDelegate {
         
     }
     
+    
     func importDocu(){
         let Boxanchor = try! Word2test.load场景()
         scene.anchors.append(Boxanchor)
     }
-    
-    func setupARSession() {
-        self.session.delegate = self
-        let configuration = ARWorldTrackingConfiguration()
-        
-        // Load the QR code image from the asset catalog
-        if let qrImage = UIImage(named: "qrcode"),
-           let qrCGImage = qrImage.cgImage {
-            let referenceImage = ARReferenceImage(qrCGImage, orientation: .up, physicalWidth: 0.05) // Adjust the physicalWidth as needed
-            referenceImage.name = "qrcode"
-            configuration.detectionImages = [referenceImage]
-        }
-        
-        session.run(configuration)
-    }
-    
     // ARSessionDelegate method
-    func session(_ session: ARSession, didAdd anchors: [ARAnchor]) {
-        for anchor in anchors {
-            if let imageAnchor = anchor as? ARImageAnchor, imageAnchor.referenceImage.name == "qrcode" {
-                placeBlock(at: imageAnchor.transform)
-                print("QR code scanned -----$(*£&*@($&*&@%(*&@")
-            }
-        }
-        
-        
-        
-    }
+    
     
 }
