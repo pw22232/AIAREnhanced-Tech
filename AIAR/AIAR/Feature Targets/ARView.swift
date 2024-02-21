@@ -17,7 +17,7 @@ class AARView: ARView {
 
     required init(frame frameRect: CGRect) {
         super.init(frame: frameRect)
-        setupARSession()
+//        setupARSession()
     }
     
     dynamic required init?(coder decoder: NSCoder) {
