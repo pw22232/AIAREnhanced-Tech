@@ -9,6 +9,13 @@ import SwiftUI
 import RealityKit
 import ARKit
 
+/// TODO:
+///
+/// Load `.rcproject` instead of `.usdz`
+///
+/// `let boxanchor = try! BoxTest6.loadScene()`
+/// `scene.anchors.append(boxanchor)`
+
 /// `ARViewContainer` is a struct that represents an `ARView` in SwiftUI.
 struct ARViewContainer: UIViewRepresentable {
     
@@ -48,8 +55,14 @@ struct ARViewContainer: UIViewRepresentable {
                                 
                                 // temporary rotation (the models I am using do not have built-in anchors so I have to
                                 // orient them manually here
-                                usdzEntity.transform.rotation = simd_quatf(angle: -1 * .pi / 2, axis: [1, 0, 0])
                                 
+                                let rotation1 = simd_quatf(angle: -1 * .pi / 2, axis: [1, 0, 0])
+                                let rotation2 = simd_quatf(angle: -1 * .pi / 2, axis: [0, 1, 0])
+                                
+                                let rotation = rotation1 * rotation2
+                                
+                                usdzEntity.transform.rotation = rotation
+
                                 // Add the `Entity` to the `AnchorEntity` and add the `AnchorEntity` to the AR scene
                                 anchorEntity.addChild(usdzEntity)
                                 self.arView?.scene.addAnchor(anchorEntity)
