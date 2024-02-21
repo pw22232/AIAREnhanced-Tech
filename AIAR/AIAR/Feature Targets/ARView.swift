@@ -87,7 +87,7 @@ class AARView: ARView {
     
     
     func importDocu(){
-        let Boxanchor = try! BallTest.load场景()
+        let Boxanchor = try! Hahaha.load场景()
         scene.anchors.append(Boxanchor)
     }
 
