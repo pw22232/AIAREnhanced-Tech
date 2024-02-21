@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A71F0C7E2B862B1200FEE1EE /* backgroundVideo1.mov in Resources */ = {isa = PBXBuildFile; fileRef = A71F0C7D2B862B1200FEE1EE /* backgroundVideo1.mov */; };
 		A72EA8802B823B1D00259F9A /* ModelList.swift in Sources */ = {isa = PBXBuildFile; fileRef = A72EA87F2B823B1D00259F9A /* ModelList.swift */; };
 		A76876EB2B6ADB8F00F95E44 /* AIARApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A76876EA2B6ADB8F00F95E44 /* AIARApp.swift */; };
 		A76876ED2B6ADB8F00F95E44 /* ARACTUAL.swift in Sources */ = {isa = PBXBuildFile; fileRef = A76876EC2B6ADB8F00F95E44 /* ARACTUAL.swift */; };
@@ -40,9 +41,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A71F0C7D2B862B1200FEE1EE /* backgroundVideo1.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = backgroundVideo1.mov; sourceTree = "<group>"; };
 		A72EA87F2B823B1D00259F9A /* ModelList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModelList.swift; sourceTree = "<group>"; };
 		A72EA8832B823BA400259F9A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		19AB8CF52B7698CA00DE7D3D /* backgroundVideo1.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = backgroundVideo1.mov; sourceTree = "<group>"; };
 		A76876E72B6ADB8F00F95E44 /* AIAR.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AIAR.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A76876EA2B6ADB8F00F95E44 /* AIARApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AIARApp.swift; sourceTree = "<group>"; };
 		A76876EC2B6ADB8F00F95E44 /* ARACTUAL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARACTUAL.swift; sourceTree = "<group>"; };
@@ -140,7 +141,7 @@
 		A76877142B6ADBA300F95E44 /* Feature Targets */ = {
 			isa = PBXGroup;
 			children = (
-				19AB8CF52B7698CA00DE7D3D /* backgroundVideo1.mov */,
+				A71F0C7D2B862B1200FEE1EE /* backgroundVideo1.mov */,
 				A76876EC2B6ADB8F00F95E44 /* ARACTUAL.swift */,
 				A76877152B6ADC1700F95E44 /* ARAction.swift */,
 				A76877172B6ADC2900F95E44 /* ARManager.swift */,
@@ -257,7 +258,7 @@
 			files = (
 				A76876F22B6ADB9000F95E44 /* Preview Assets.xcassets in Resources */,
 				A76876EF2B6ADB9000F95E44 /* Assets.xcassets in Resources */,
-				19AB8CF62B7698CA00DE7D3D /* backgroundVideo1.mov in Resources */,
+				A71F0C7E2B862B1200FEE1EE /* backgroundVideo1.mov in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
