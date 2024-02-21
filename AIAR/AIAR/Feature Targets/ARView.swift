@@ -80,14 +80,14 @@ class AARView: ARView {
           }
     
     func importRc(){
-        let Boxanchor = try! Word2test.load场景()
+        let Boxanchor = try! Magicworld.load场景()
         scene.anchors.append(Boxanchor)
         
     }
     
     
     func importDocu(){
-        let Boxanchor = try! Hahaha.load场景()
+        let Boxanchor = try! GalasaDocument.load场景()
         scene.anchors.append(Boxanchor)
     }
 
