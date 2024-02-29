@@ -40,8 +40,8 @@ jobs:
             file_to_build="AIAR.xcodeproj"
           fi
           # Build for testing using iPhone simulator
-          xcodebuild build-for-testing -scheme "$scheme" -"$filetype_parameter" "$file_to_build" -destination 'platform=iOS Simulator, name=Any iOS Simulator Device'
-         
+          xcodebuild build-for-testing -scheme "$scheme" -"$filetype_parameter" "$file_to_build" -destination 'platform=iOS Simulator,OS=17.0,name=iPhone 15'
+
       - name: Test
         env:
           scheme: ${{ 'default' }}
