@@ -7,7 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		19AB8CF62B7698CA00DE7D3D /* backgroundVideo1.mov in Resources */ = {isa = PBXBuildFile; fileRef = 19AB8CF52B7698CA00DE7D3D /* backgroundVideo1.mov */; };
+		A71F0C7E2B862B1200FEE1EE /* backgroundVideo1.mov in Resources */ = {isa = PBXBuildFile; fileRef = A71F0C7D2B862B1200FEE1EE /* backgroundVideo1.mov */; };
+		A72EA8802B823B1D00259F9A /* ModelList.swift in Sources */ = {isa = PBXBuildFile; fileRef = A72EA87F2B823B1D00259F9A /* ModelList.swift */; };
 		A76876EB2B6ADB8F00F95E44 /* AIARApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A76876EA2B6ADB8F00F95E44 /* AIARApp.swift */; };
 		A76876ED2B6ADB8F00F95E44 /* ARACTUAL.swift in Sources */ = {isa = PBXBuildFile; fileRef = A76876EC2B6ADB8F00F95E44 /* ARACTUAL.swift */; };
 		A76876EF2B6ADB9000F95E44 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A76876EE2B6ADB9000F95E44 /* Assets.xcassets */; };
@@ -20,6 +21,11 @@
 		A76877202B6AE0FF00F95E44 /* team.swift in Sources */ = {isa = PBXBuildFile; fileRef = A768771F2B6AE0FF00F95E44 /* team.swift */; };
 		A76877222B6AEB4200F95E44 /* boxTest6.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = A76877212B6AEB4200F95E44 /* boxTest6.rcproject */; };
 		A768775C2B72439D00F95E44 /* word2test.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = A768775B2B72439D00F95E44 /* word2test.rcproject */; };
+		A7AE9F6F2B9890FA00B1809D /* Atest.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = A7AE9F6E2B9890FA00B1809D /* Atest.rcproject */; };
+		A7F372B32B862DF000ACC302 /* ballTest.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = A7F372B22B862DF000ACC302 /* ballTest.rcproject */; };
+		A7F372BF2B86341400ACC302 /* hahaha.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = A7F372BE2B86341400ACC302 /* hahaha.rcproject */; };
+		A7F372C12B86342000ACC302 /* galasaDocument.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = A7F372C02B86342000ACC302 /* galasaDocument.rcproject */; };
+		A7F372C32B8634A400ACC302 /* magicworld.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = A7F372C22B8634A400ACC302 /* magicworld.rcproject */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,7 +46,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		19AB8CF52B7698CA00DE7D3D /* backgroundVideo1.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = backgroundVideo1.mov; sourceTree = "<group>"; };
+		A71F0C7D2B862B1200FEE1EE /* backgroundVideo1.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = backgroundVideo1.mov; sourceTree = "<group>"; };
+		A72EA87F2B823B1D00259F9A /* ModelList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModelList.swift; sourceTree = "<group>"; };
+		A72EA8832B823BA400259F9A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A76876E72B6ADB8F00F95E44 /* AIAR.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AIAR.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A76876EA2B6ADB8F00F95E44 /* AIARApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AIARApp.swift; sourceTree = "<group>"; };
 		A76876EC2B6ADB8F00F95E44 /* ARACTUAL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARACTUAL.swift; sourceTree = "<group>"; };
@@ -54,6 +62,11 @@
 		A768771F2B6AE0FF00F95E44 /* team.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = team.swift; sourceTree = "<group>"; };
 		A76877212B6AEB4200F95E44 /* boxTest6.rcproject */ = {isa = PBXFileReference; lastKnownFileType = file.rcproject; path = boxTest6.rcproject; sourceTree = "<group>"; };
 		A768775B2B72439D00F95E44 /* word2test.rcproject */ = {isa = PBXFileReference; lastKnownFileType = file.rcproject; path = word2test.rcproject; sourceTree = "<group>"; };
+		A7AE9F6E2B9890FA00B1809D /* Atest.rcproject */ = {isa = PBXFileReference; lastKnownFileType = file.rcproject; path = Atest.rcproject; sourceTree = "<group>"; };
+		A7F372B22B862DF000ACC302 /* ballTest.rcproject */ = {isa = PBXFileReference; lastKnownFileType = file.rcproject; path = ballTest.rcproject; sourceTree = "<group>"; };
+		A7F372BE2B86341400ACC302 /* hahaha.rcproject */ = {isa = PBXFileReference; lastKnownFileType = file.rcproject; path = hahaha.rcproject; sourceTree = "<group>"; };
+		A7F372C02B86342000ACC302 /* galasaDocument.rcproject */ = {isa = PBXFileReference; lastKnownFileType = file.rcproject; path = galasaDocument.rcproject; sourceTree = "<group>"; };
+		A7F372C22B8634A400ACC302 /* magicworld.rcproject */ = {isa = PBXFileReference; lastKnownFileType = file.rcproject; path = magicworld.rcproject; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,9 +115,11 @@
 		A76876E92B6ADB8F00F95E44 /* AIAR */ = {
 			isa = PBXGroup;
 			children = (
+				A72EA8832B823BA400259F9A /* Info.plist */,
 				A76877142B6ADBA300F95E44 /* Feature Targets */,
 				A76876EA2B6ADB8F00F95E44 /* AIARApp.swift */,
 				A76876EE2B6ADB9000F95E44 /* Assets.xcassets */,
+				A7F372B22B862DF000ACC302 /* ballTest.rcproject */,
 				A768775B2B72439D00F95E44 /* word2test.rcproject */,
 				A76877212B6AEB4200F95E44 /* boxTest6.rcproject */,
 				A76876F02B6ADB9000F95E44 /* Preview Content */,
@@ -137,13 +152,18 @@
 		A76877142B6ADBA300F95E44 /* Feature Targets */ = {
 			isa = PBXGroup;
 			children = (
-				19AB8CF52B7698CA00DE7D3D /* backgroundVideo1.mov */,
+				A7F372BE2B86341400ACC302 /* hahaha.rcproject */,
+				A71F0C7D2B862B1200FEE1EE /* backgroundVideo1.mov */,
 				A76876EC2B6ADB8F00F95E44 /* ARACTUAL.swift */,
+				A7F372C22B8634A400ACC302 /* magicworld.rcproject */,
 				A76877152B6ADC1700F95E44 /* ARAction.swift */,
+				A7F372C02B86342000ACC302 /* galasaDocument.rcproject */,
 				A76877172B6ADC2900F95E44 /* ARManager.swift */,
 				A76877192B6ADC3F00F95E44 /* ARView.swift */,
 				A768771B2B6ADC5E00F95E44 /* ARViewRepresentable.swift */,
+				A7AE9F6E2B9890FA00B1809D /* Atest.rcproject */,
 				A768771D2B6AE09300F95E44 /* ContentView.swift */,
+				A72EA87F2B823B1D00259F9A /* ModelList.swift */,
 				A768771F2B6AE0FF00F95E44 /* team.swift */,
 			);
 			path = "Feature Targets";
@@ -253,7 +273,7 @@
 			files = (
 				A76876F22B6ADB9000F95E44 /* Preview Assets.xcassets in Resources */,
 				A76876EF2B6ADB9000F95E44 /* Assets.xcassets in Resources */,
-				19AB8CF62B7698CA00DE7D3D /* backgroundVideo1.mov in Resources */,
+				A71F0C7E2B862B1200FEE1EE /* backgroundVideo1.mov in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -278,11 +298,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A7F372C32B8634A400ACC302 /* magicworld.rcproject in Sources */,
 				A768771A2B6ADC3F00F95E44 /* ARView.swift in Sources */,
 				A76877182B6ADC2A00F95E44 /* ARManager.swift in Sources */,
+				A72EA8802B823B1D00259F9A /* ModelList.swift in Sources */,
+				A7F372BF2B86341400ACC302 /* hahaha.rcproject in Sources */,
+				A7F372B32B862DF000ACC302 /* ballTest.rcproject in Sources */,
 				A768771C2B6ADC5E00F95E44 /* ARViewRepresentable.swift in Sources */,
+				A7F372C12B86342000ACC302 /* galasaDocument.rcproject in Sources */,
 				A76876ED2B6ADB8F00F95E44 /* ARACTUAL.swift in Sources */,
 				A76877202B6AE0FF00F95E44 /* team.swift in Sources */,
+				A7AE9F6F2B9890FA00B1809D /* Atest.rcproject in Sources */,
 				A768771E2B6AE09300F95E44 /* ContentView.swift in Sources */,
 				A76876EB2B6ADB8F00F95E44 /* AIARApp.swift in Sources */,
 				A76877222B6AEB4200F95E44 /* boxTest6.rcproject in Sources */,
