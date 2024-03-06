@@ -13,7 +13,8 @@ struct VideoPlayerView: UIViewRepresentable {
     
     func makeUIView(context: Context) -> UIView {
         let view = UIView()
-        let player = AVPlayer(url: Bundle.main.url(forResource: "backgroundVideo1", withExtension: "mov")!)
+        let player = AVPlayer(url : Bundle.main.url(forResource:"backgroundVideo1", withExtension: "mov")!)
+    
         let playerLayer = AVPlayerLayer(player: player)
         playerLayer.frame = UIScreen.main.bounds
         playerLayer.videoGravity = .resizeAspectFill
@@ -31,36 +32,7 @@ struct VideoPlayerView: UIViewRepresentable {
     func updateUIView(_ uiView: UIView, context: Context) {}
 }
 
-class VideoPlayerViewController: UIViewController {
-    private var player: AVPlayer?
-    private var playerLayer: AVPlayerLayer?
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        let player = AVPlayer(url: Bundle.main.url(forResource: "backgroundVideo", withExtension: "mov")!)
-        let playerLayer = AVPlayerLayer(player: player)
-        playerLayer.frame = view.bounds
-        playerLayer.videoGravity = .resizeAspectFill
-        view.layer.addSublayer(playerLayer)
-        
-        NotificationCenter.default.addObserver(forName: .AVPlayerItemDidPlayToEndTime, object: player.currentItem, queue: nil) { [weak player] _ in
-            player?.seek(to: CMTime.zero)
-            player?.play()
-        }
-        
-        player.play()
-        
-        self.player = player
-        self.playerLayer = playerLayer
-    }
-    
-    override func viewDidDisappear(_ animated: Bool) {
-        super.viewDidDisappear(animated)
-        player?.pause()
-        NotificationCenter.default.removeObserver(self)
-    }
-}
+
 
 struct ContentView: View {
     var body: some View {
