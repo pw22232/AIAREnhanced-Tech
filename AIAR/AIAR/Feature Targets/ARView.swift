@@ -80,7 +80,7 @@ class AARView: ARView {
           }
     
     func importRc(){
-        let Boxanchor = try! Magicworld.load场景()
+        let Boxanchor = try! Atest.load场景()
         scene.anchors.append(Boxanchor)
         
     }

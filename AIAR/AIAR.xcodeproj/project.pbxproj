@@ -21,6 +21,7 @@
 		A76877202B6AE0FF00F95E44 /* team.swift in Sources */ = {isa = PBXBuildFile; fileRef = A768771F2B6AE0FF00F95E44 /* team.swift */; };
 		A76877222B6AEB4200F95E44 /* boxTest6.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = A76877212B6AEB4200F95E44 /* boxTest6.rcproject */; };
 		A768775C2B72439D00F95E44 /* word2test.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = A768775B2B72439D00F95E44 /* word2test.rcproject */; };
+		A7AE9F6F2B9890FA00B1809D /* Atest.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = A7AE9F6E2B9890FA00B1809D /* Atest.rcproject */; };
 		A7F372B32B862DF000ACC302 /* ballTest.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = A7F372B22B862DF000ACC302 /* ballTest.rcproject */; };
 		A7F372BF2B86341400ACC302 /* hahaha.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = A7F372BE2B86341400ACC302 /* hahaha.rcproject */; };
 		A7F372C12B86342000ACC302 /* galasaDocument.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = A7F372C02B86342000ACC302 /* galasaDocument.rcproject */; };
@@ -61,6 +62,7 @@
 		A768771F2B6AE0FF00F95E44 /* team.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = team.swift; sourceTree = "<group>"; };
 		A76877212B6AEB4200F95E44 /* boxTest6.rcproject */ = {isa = PBXFileReference; lastKnownFileType = file.rcproject; path = boxTest6.rcproject; sourceTree = "<group>"; };
 		A768775B2B72439D00F95E44 /* word2test.rcproject */ = {isa = PBXFileReference; lastKnownFileType = file.rcproject; path = word2test.rcproject; sourceTree = "<group>"; };
+		A7AE9F6E2B9890FA00B1809D /* Atest.rcproject */ = {isa = PBXFileReference; lastKnownFileType = file.rcproject; path = Atest.rcproject; sourceTree = "<group>"; };
 		A7F372B22B862DF000ACC302 /* ballTest.rcproject */ = {isa = PBXFileReference; lastKnownFileType = file.rcproject; path = ballTest.rcproject; sourceTree = "<group>"; };
 		A7F372BE2B86341400ACC302 /* hahaha.rcproject */ = {isa = PBXFileReference; lastKnownFileType = file.rcproject; path = hahaha.rcproject; sourceTree = "<group>"; };
 		A7F372C02B86342000ACC302 /* galasaDocument.rcproject */ = {isa = PBXFileReference; lastKnownFileType = file.rcproject; path = galasaDocument.rcproject; sourceTree = "<group>"; };
@@ -159,6 +161,7 @@
 				A76877172B6ADC2900F95E44 /* ARManager.swift */,
 				A76877192B6ADC3F00F95E44 /* ARView.swift */,
 				A768771B2B6ADC5E00F95E44 /* ARViewRepresentable.swift */,
+				A7AE9F6E2B9890FA00B1809D /* Atest.rcproject */,
 				A768771D2B6AE09300F95E44 /* ContentView.swift */,
 				A72EA87F2B823B1D00259F9A /* ModelList.swift */,
 				A768771F2B6AE0FF00F95E44 /* team.swift */,
@@ -305,6 +308,7 @@
 				A7F372C12B86342000ACC302 /* galasaDocument.rcproject in Sources */,
 				A76876ED2B6ADB8F00F95E44 /* ARACTUAL.swift in Sources */,
 				A76877202B6AE0FF00F95E44 /* team.swift in Sources */,
+				A7AE9F6F2B9890FA00B1809D /* Atest.rcproject in Sources */,
 				A768771E2B6AE09300F95E44 /* ContentView.swift in Sources */,
 				A76876EB2B6ADB8F00F95E44 /* AIARApp.swift in Sources */,
 				A76877222B6AEB4200F95E44 /* boxTest6.rcproject in Sources */,
