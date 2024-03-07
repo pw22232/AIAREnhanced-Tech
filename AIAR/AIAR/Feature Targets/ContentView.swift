@@ -14,7 +14,7 @@ struct VideoPlayerView: UIViewRepresentable {
     func makeUIView(context: Context) -> UIView {
         let view = UIView()
         let player = AVPlayer(url : Bundle.main.url(forResource:"backgroundVideo1", withExtension: "mov")!)
-    
+        
         let playerLayer = AVPlayerLayer(player: player)
         playerLayer.frame = UIScreen.main.bounds
         playerLayer.videoGravity = .resizeAspectFill
@@ -72,7 +72,7 @@ struct ContentView: View {
                         .padding(.top, -145) // Add bottom padding for space
                     
                     NavigationLink(destination: ARACTUAL()) {
-                        Text("Go to the Majic World")
+                        Text("Go to AR View")
                             .fontWeight(.semibold)
                             .padding()
                             .background(Color.white)
@@ -99,9 +99,27 @@ struct ContentView: View {
                                     .stroke(Color.black, lineWidth: 1)
                             )
                     }
+                    .padding(.bottom, 10) // Add bottom padding for space
+                    
+                    
+                    NavigationLink(destination: InstructionsView()) {
+                        Text("Instructions")
+                            .fontWeight(.semibold)
+                            .padding()
+                            .background(Color.white)
+                            .foregroundColor(Color.black)
+                            .cornerRadius(8)
+                            .shadow(color: Color.black, radius: 3, x: 0, y: 2)
+                            .overlay(
+                                RoundedRectangle(cornerRadius: 8)
+                                    .stroke(Color.black, lineWidth: 1)
+                            )
+                    }
+                    .padding(.bottom, 10) // Add bottom padding for space
+                    
                 }
             }
-
+            
         }
         .navigationBarTitle("Main Page") // Set the title in the navigation bar
     }
