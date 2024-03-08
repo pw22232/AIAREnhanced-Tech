@@ -5,6 +5,7 @@ This is a preliminary page illustrating the concepts and ideas we were exploring
 ## Table of Contents
   - [Initial Concept](#Initial-Concept)
   - [Our MVP](#Our-MVP)
+  - [Our Beta Realese](#Our-Beta-Realese)
 
 ## Initial Concept
 
@@ -111,3 +112,7 @@ Our MVP demonstrates we can spawn in Galasa diagrams when prompted by the docume
 * Getting IBM to sign the dotted line
 
 ![Squad](squad.png)
+
+### Our Beta Release
+
+For our beta release, we're excited to take our application to the next level by integrating all the individual components of our technology stack into a cohesive and robust experience. This includes expanding our use of QR codes to integrate more diagrams into the augmented reality environment and enhancing the user interface for a smoother and more intuitive interaction.
