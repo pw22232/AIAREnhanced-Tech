@@ -43,6 +43,9 @@ struct ARViewContainer: UIViewRepresentable {
                 {
                     print("Detected Image: \(path)")
                     
+                    // TODO check for existing model in local storage, then delete it???
+                    // Make sure that only one model can be loaded at a time (in local storage and in AR)
+                    
                     // Download the usdz file from Firebase Storage
                     USDZLoader().asyncDownloadUSDZ(from: path) { fileURL in
                         DispatchQueue.main.async {
