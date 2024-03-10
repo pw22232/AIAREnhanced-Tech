@@ -9,13 +9,6 @@ import SwiftUI
 import RealityKit
 import ARKit
 
-/// TODO:
-///
-/// Load `.rcproject` instead of `.usdz`
-///
-/// `let boxanchor = try! BoxTest6.loadScene()`
-/// `scene.anchors.append(boxanchor)`
-
 /// `ARViewContainer` is a struct that represents an `ARView` in SwiftUI.
 struct ARViewContainer: UIViewRepresentable {
     
