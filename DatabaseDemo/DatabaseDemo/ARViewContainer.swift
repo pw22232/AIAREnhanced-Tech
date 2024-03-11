@@ -16,6 +16,7 @@ struct ARViewContainer: UIViewRepresentable {
     var referenceImages: Set<ARReferenceImage>
     @State private var detectedImageAnchor: ARImageAnchor?
     @State private var modelPath: String?
+    @Binding var shouldReset: Bool
     
     /// Creates a `Coordinator` object for managing the interaction between SwiftUI and UIKit
     func makeCoordinator() -> Coordinator {
@@ -67,10 +68,22 @@ struct ARViewContainer: UIViewRepresentable {
     }
 
     /// Function to update the ARView.
-    ///
-    /// This function is currently empty because the ARView does not need to be updated.
     func updateUIView(_ uiView: ARView, context: Context) {
         guard let imageAnchor = detectedImageAnchor, let path = modelPath else { return }
+        
+        if shouldReset {
+            uiView.session.pause()
+            uiView.scene.anchors.removeAll()
+            
+            let configuration = ARWorldTrackingConfiguration()
+            configuration.detectionImages = referenceImages
+            uiView.session.run(configuration, options: [.resetTracking, .removeExistingAnchors])
+            
+            DispatchQueue.main.async {
+                // Reset the state to avoid continuous resetting
+                self.shouldReset = false
+            }
+        }
         
         uiView.scene.anchors.removeAll()
         
@@ -85,7 +98,8 @@ struct ARViewContainer: UIViewRepresentable {
                     let anchorEntity = AnchorEntity(anchor: imageAnchor) // Place the anchor at the origin
                     
                     // temporary rotation (the models I am using do not have built-in anchors so I have to
-                    // orient them manually here
+                    // orient them manually here)
+                    // if models are not all oriented the same way, I will include the necessary rotation data in the metadata and read that
                     
                     let rotation1 = simd_quatf(angle: -1 * .pi / 2, axis: [1, 0, 0])
                     let rotation2 = simd_quatf(angle: -1 * .pi / 2, axis: [0, 1, 0])
