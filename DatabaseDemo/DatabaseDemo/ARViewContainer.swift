@@ -14,17 +14,23 @@ struct ARViewContainer: UIViewRepresentable {
     
     /// Set of `ARReferenceImage` that will be used to detect images in the real world
     var referenceImages: Set<ARReferenceImage>
+    @State private var detectedImageAnchor: ARImageAnchor?
+    @State private var modelPath: String?
     
     /// Creates a `Coordinator` object for managing the interaction between SwiftUI and UIKit
     func makeCoordinator() -> Coordinator {
-        Coordinator()
+        Coordinator(self)
     }
     
     /// `Coordinator` is a class that acts as the delegate for the `ARSession`.
     class Coordinator: NSObject, ARSessionDelegate {
+          
+        var parent: ARViewContainer
+        var lastDetectedImage: String?
         
-        // A reference to the ARView that this coordinator is managing.
-        var arView: ARView?
+        init(_ parent: ARViewContainer) {
+            self.parent = parent
+        }
 
         /// Function that is called when new anchors are added to the AR session.
         func session(_ session: ARSession, didAdd anchors: [ARAnchor]) {
@@ -35,39 +41,8 @@ struct ARViewContainer: UIViewRepresentable {
                     let path = imageAnchor.referenceImage.name
                 {
                     print("Detected Image: \(path)")
-                    
-                    // TODO check for existing model in local storage, then delete it???
-                    // Make sure that only one model can be loaded at a time (in local storage and in AR)
-                    
-                    // Download the usdz file from Firebase Storage
-                    USDZLoader().asyncDownloadUSDZ(from: path) { fileURL in
-                        DispatchQueue.main.async {
-                            do {
-                                // Load the usdz file into an `Entity`
-                                let usdzEntity = try Entity.loadModel(contentsOf: fileURL)
-                                
-                                // Create an `AnchorEntity` at the location of the detected QR code image
-                                let anchorEntity = AnchorEntity(anchor: imageAnchor) // Place the anchor at the origin
-                                
-                                // temporary rotation (the models I am using do not have built-in anchors so I have to
-                                // orient them manually here
-                                
-                                let rotation1 = simd_quatf(angle: -1 * .pi / 2, axis: [1, 0, 0])
-                                let rotation2 = simd_quatf(angle: -1 * .pi / 2, axis: [0, 1, 0])
-                                
-                                let rotation = rotation1 * rotation2
-                                
-                                usdzEntity.transform.rotation = rotation
-
-                                // Add the `Entity` to the `AnchorEntity` and add the `AnchorEntity` to the AR scene
-                                anchorEntity.addChild(usdzEntity)
-                                self.arView?.scene.addAnchor(anchorEntity)
-                            } catch {
-                                print("Error loading USDZ data into RealityKit: \(error.localizedDescription)")
-                            }
-                        }
-                    }
-
+                    parent.detectedImageAnchor = imageAnchor
+                    parent.modelPath = path
                 }
             }
         }
@@ -83,9 +58,6 @@ struct ARViewContainer: UIViewRepresentable {
         let configuration = ARWorldTrackingConfiguration()
         configuration.detectionImages = referenceImages
 
-        // Set the delegate of the `ARSession` to the `Coordinator` object
-        let coodinator = context.coordinator
-        coodinator.arView = arView
         arView.session.delegate = context.coordinator
 
         // Start the AR session
@@ -97,5 +69,38 @@ struct ARViewContainer: UIViewRepresentable {
     /// Function to update the ARView.
     ///
     /// This function is currently empty because the ARView does not need to be updated.
-    func updateUIView(_ uiView: ARView, context: Context) {}
+    func updateUIView(_ uiView: ARView, context: Context) {
+        guard let imageAnchor = detectedImageAnchor, let path = modelPath else { return }
+        
+        uiView.scene.anchors.removeAll()
+        
+        // Download the usdz file from Firebase Storage
+        USDZLoader().asyncDownloadUSDZ(from: path) { fileURL in
+            DispatchQueue.main.async {
+                do {
+                    // Load the usdz file into an `Entity`
+                    let usdzEntity = try Entity.loadModel(contentsOf: fileURL)
+                    
+                    // Create an `AnchorEntity` at the location of the detected QR code image
+                    let anchorEntity = AnchorEntity(anchor: imageAnchor) // Place the anchor at the origin
+                    
+                    // temporary rotation (the models I am using do not have built-in anchors so I have to
+                    // orient them manually here
+                    
+                    let rotation1 = simd_quatf(angle: -1 * .pi / 2, axis: [1, 0, 0])
+                    let rotation2 = simd_quatf(angle: -1 * .pi / 2, axis: [0, 1, 0])
+                    
+                    let rotation = rotation1 * rotation2
+                    
+                    usdzEntity.transform.rotation = rotation
+
+                    // Add the `Entity` to the `AnchorEntity` and add the `AnchorEntity` to the AR scene
+                    anchorEntity.addChild(usdzEntity)
+                    uiView.scene.addAnchor(anchorEntity)
+                } catch {
+                    print("Error loading USDZ data into RealityKit: \(error.localizedDescription)")
+                }
+            }
+        }
+    }
 }
