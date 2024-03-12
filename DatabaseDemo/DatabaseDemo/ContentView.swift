@@ -22,7 +22,7 @@ struct ContentView: View {
                 
                     // overlays (for now) one button on the ARiew inside ARViewContainer so
                     // the user can reset the ARView whenever it stops working.
-                    .overlay(
+                    .overlay(alignment: .bottom, content: {
                         Button(action: {
                             self.shouldReset = true
                         }) {
@@ -39,9 +39,8 @@ struct ContentView: View {
                             .background(.regularMaterial)
                             .cornerRadius(16)
                         }
-                        .padding(),
-                        alignment: .bottom
-                    )
+                        .padding()
+                    })
                 }) {
                     Text("Open AR View")
                 }
