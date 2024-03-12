@@ -14,8 +14,21 @@ struct ARViewContainer: UIViewRepresentable {
     
     /// Set of `ARReferenceImage` that will be used to detect images in the real world
     var referenceImages: Set<ARReferenceImage>
+    
+    /// An `ARImageAnchor` representing the detected image in the real world.
+    ///
+    /// This is set when an image from `referenceImages` is detected by the AR session.
     @State private var detectedImageAnchor: ARImageAnchor?
+    
+    /// A string representing the path to the 3D model that should be displayed when an image is detected.
+    ///
+    /// This is set when an image from `referenceImages` is detected by the AR session.
     @State private var modelPath: String?
+    
+    /// A Boolean value that determines whether the AR session should be reset.
+    ///
+    /// When this is set to `true`, the AR session is paused, all anchors are removed from the scene,
+    /// and the AR session is restarted with the same configuration.
     @Binding var shouldReset: Bool
     
     /// Creates a `Coordinator` object for managing the interaction between SwiftUI and UIKit
@@ -25,9 +38,11 @@ struct ARViewContainer: UIViewRepresentable {
     
     /// `Coordinator` is a class that acts as the delegate for the `ARSession`.
     class Coordinator: NSObject, ARSessionDelegate {
-          
+        
+        /// A reference to the parent `ARViewContainer` that created this `Coordinator`.
+        ///
+        /// This allows the `Coordinator` to update the state of the `ARViewContainer` when images are detected.
         var parent: ARViewContainer
-        var lastDetectedImage: String?
         
         init(_ parent: ARViewContainer) {
             self.parent = parent
@@ -52,10 +67,12 @@ struct ARViewContainer: UIViewRepresentable {
     /// Creates an `ARView` and sets the `ARWorldTrackingConfiguration` to detect the images in `referenceImages`.
     func makeUIView(context: Context) -> ARView {
 
-        // Create a new `ARView`
+        /// A new instance of `ARView`.
         let arView = ARView(frame: .zero)
         
-        // Create a new `ARWorldTrackingConfiguration` and set its `detectionImages` property to the set of `ARReferenceImage`s.
+        /// An instance of `ARWorldTrackingConfiguration` which is used to configure the AR session.
+        ///
+        /// It is set to detect the images in `referenceImages`.
         let configuration = ARWorldTrackingConfiguration()
         configuration.detectionImages = referenceImages
 
@@ -69,9 +86,8 @@ struct ARViewContainer: UIViewRepresentable {
 
     /// Function to update the ARView.
     func updateUIView(_ uiView: ARView, context: Context) {
-        guard let imageAnchor = detectedImageAnchor, let path = modelPath else { return }
-        
         if shouldReset {
+            print("hello")
             uiView.session.pause()
             uiView.scene.anchors.removeAll()
             
@@ -83,6 +99,14 @@ struct ARViewContainer: UIViewRepresentable {
                 // Reset the state to avoid continuous resetting
                 self.shouldReset = false
             }
+        }
+        
+        // ensure that imageAnchor and path are non-nil
+        guard
+            let imageAnchor = detectedImageAnchor,
+            let path = modelPath
+        else {
+            return
         }
         
         uiView.scene.anchors.removeAll()
