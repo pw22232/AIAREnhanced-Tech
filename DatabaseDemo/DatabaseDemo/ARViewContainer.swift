@@ -87,7 +87,7 @@ struct ARViewContainer: UIViewRepresentable {
     /// Function to update the ARView.
     func updateUIView(_ uiView: ARView, context: Context) {
         if shouldReset {
-            print("hello")
+            print("Resetting ARView")
             uiView.session.pause()
             uiView.scene.anchors.removeAll()
             

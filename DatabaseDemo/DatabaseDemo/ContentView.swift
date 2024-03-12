@@ -25,7 +25,7 @@ struct ContentView: View {
                     .overlay(alignment: .bottom, content: {
                         Button(action: {
                             self.shouldReset = true
-                            print("Resetting ARView")
+                            print("Reset Button Clicked")
                         }) {
                             VStack {
                                 Image(systemName: "arrow.counterclockwise")
