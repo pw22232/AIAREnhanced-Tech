@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		04107E932B9A299800851B43 /* Instructions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04107E922B9A299800851B43 /* Instructions.swift */; };
 		A71F0C7E2B862B1200FEE1EE /* backgroundVideo1.mov in Resources */ = {isa = PBXBuildFile; fileRef = A71F0C7D2B862B1200FEE1EE /* backgroundVideo1.mov */; };
 		A72EA8802B823B1D00259F9A /* ModelList.swift in Sources */ = {isa = PBXBuildFile; fileRef = A72EA87F2B823B1D00259F9A /* ModelList.swift */; };
 		A76876EB2B6ADB8F00F95E44 /* AIARApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A76876EA2B6ADB8F00F95E44 /* AIARApp.swift */; };
@@ -46,6 +47,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		04107E922B9A299800851B43 /* Instructions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Instructions.swift; sourceTree = "<group>"; };
 		A71F0C7D2B862B1200FEE1EE /* backgroundVideo1.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = backgroundVideo1.mov; sourceTree = "<group>"; };
 		A72EA87F2B823B1D00259F9A /* ModelList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModelList.swift; sourceTree = "<group>"; };
 		A72EA8832B823BA400259F9A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -165,6 +167,7 @@
 				A768771D2B6AE09300F95E44 /* ContentView.swift */,
 				A72EA87F2B823B1D00259F9A /* ModelList.swift */,
 				A768771F2B6AE0FF00F95E44 /* team.swift */,
+				04107E922B9A299800851B43 /* Instructions.swift */,
 			);
 			path = "Feature Targets";
 			sourceTree = "<group>";
@@ -305,6 +308,7 @@
 				A7F372BF2B86341400ACC302 /* hahaha.rcproject in Sources */,
 				A7F372B32B862DF000ACC302 /* ballTest.rcproject in Sources */,
 				A768771C2B6ADC5E00F95E44 /* ARViewRepresentable.swift in Sources */,
+				04107E932B9A299800851B43 /* Instructions.swift in Sources */,
 				A7F372C12B86342000ACC302 /* galasaDocument.rcproject in Sources */,
 				A76876ED2B6ADB8F00F95E44 /* ARACTUAL.swift in Sources */,
 				A76877202B6AE0FF00F95E44 /* team.swift in Sources */,

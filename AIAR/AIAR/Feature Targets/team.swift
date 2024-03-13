@@ -73,8 +73,5 @@ struct TeamRepresentable: View {
                     }
             }
         }
-        
-        
-        
     }
 }
