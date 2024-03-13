@@ -25,11 +25,11 @@ struct InstructionsView: View {
                 .multilineTextAlignment(.center)
                 .padding()
             
-            Text("Unlock the full potential of your documents by scanning the QR codes accompanying the diagrams using your smartphone. Delve into an augmented reality world where static diagrams come to life, offering a dynamic and interactive learning experience.")
+            Text("Unlock the full potential of your documents by scanning the QR codes accompanying the diagrams using your smartphone. Engage with IBM Watson Assistant, your virtual guide, to gain detailed insights into the diagrams. Delve into an augmented reality world where static diagrams come to life, offering a dynamic and interactive learning experience.")
                 .multilineTextAlignment(.center)
                 .padding()
             
-            Text("With just a tap of a button, effortlessly toggle between different versions of the diagrams. Witness the power of dynamic visualization as complex concepts unfold before your eyes, making understanding technical content a breeze.")
+            Text("Converse with our AI chatbot, Antonio, and effortlessly obtain explanations and additional information about the diagrams. Witness the power of dynamic visualization as complex concepts unfold before your eyes, making understanding technical content a breeze.")
                 .multilineTextAlignment(.center)
                 .padding()
             
