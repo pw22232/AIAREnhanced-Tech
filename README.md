@@ -63,6 +63,7 @@ By tailoring your product to meet the needs of these three personas, we can ensu
 ### Prerequisites
 
 - Download Xcode for Swift
+- Clone the repository using the command `git clone https://github.com/spe-uob/2023-AIAREnhancedTech`
 
 ### Technologies
 
@@ -72,6 +73,11 @@ By tailoring your product to meet the needs of these three personas, we can ensu
   
 - **IBM's AI Watson Speech to Text, Text to Speech**  -  IBM's Watson is an artificial intelligence system developed by IBM. Watson is powered by advanced machine learning and natural language processing algorithms. Watson Speech to Text and Text to Speech are services within IBM's Watson AI platform. We will look to harness Watson’s Text to Speech service to transform written text into lifelike speech, facilitating the application's interactive voice response systems.
 
+## User Instructions
+
+### Developer Instructions
+  
+- Contact bn22907@bristol.ac.uk if you wish to develop so that you can be added to the XCode developer team
 
 ### Setup and Build
 
