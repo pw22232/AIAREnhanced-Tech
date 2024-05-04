@@ -63,7 +63,7 @@ By tailoring your product to meet the needs of these three personas, we can ensu
 ### Prerequisites
 
 - Download Xcode for Swift
-- Clone the repository using the command `git clone https://github.com/spe-uob/2023-AIAREnhancedTech`
+- Clone the repository using the command `git clone git@github.com:pw22232/AIAREnhanced-Tech.git`
 
 ### Technologies
 
