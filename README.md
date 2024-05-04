@@ -77,11 +77,11 @@ By tailoring your product to meet the needs of these three personas, we can ensu
 
 ### Developer Instructions
   
-- Contact bn22907@bristol.ac.uk if you wish to develop so that you can be added to the XCode developer team
+- Contact pw22232@bristol.ac.uk if you wish to develop
 
 ### Setup and Build
 
-- Clone the git repository using the command `git clone https://github.com/spe-uob/2023-AIAREnhancedTech`
+- Clone the git repository using the command `git clonegit@github.com:pw22232/AIAREnhanced-Tech.git`
 - Open the project XCode
 - Click the `Product` tab
 - Then click `Build`
