@@ -81,7 +81,7 @@ By tailoring your product to meet the needs of these three personas, we can ensu
 
 ### Setup and Build
 
-- Clone the git repository using the command `git clonegit@github.com:pw22232/AIAREnhanced-Tech.git`
+- Clone the git repository using the command `git clone git@github.com:pw22232/AIAREnhanced-Tech.git`
 - Open the project XCode
 - Click the `Product` tab
 - Then click `Build`
