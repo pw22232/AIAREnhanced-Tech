@@ -75,10 +75,6 @@ By tailoring your product to meet the needs of these three personas, we can ensu
 
 ## User Instructions
 
-### Developer Instructions
-  
-- Contact pw22232@bristol.ac.uk if you wish to develop
-
 ### Setup and Build
 
 - Clone the git repository using the command `git clone git@github.com:pw22232/AIAREnhanced-Tech.git`
